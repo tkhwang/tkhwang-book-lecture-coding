@@ -2,15 +2,9 @@
 
 다음 강좌 들으면서 coding 연습 !!!
 
-## Now
+## Current
 
-### epress.js
-
-#### [[초급 풀스택] 유튜브 클론 코딩 | Nomad Coders](https://academy.nomadcoders.co/p/javascript-fullstack-from-zero-to-hero)
-
-- 유튜브 백엔드 클론 : MongoDB, NodeJS, ES6, AWS
-- 유튜브 프런트엔드 클론 : 100% Vanilla JS! SaSS, ES6, WebPack, Pug
-- 서버 배포 : Express, AWS, Heroku
+2019/08/02 ~ ING
 
 ### nest.js
 
@@ -19,7 +13,7 @@
 - typescript, nest.js
 - Develop and deploy enterprise back-end applications following best practices using Node.js and TypeScript
 
-## Planned
+## Next
 
 ### GraphQL/express.js
 
@@ -30,3 +24,13 @@
 ### Typescript, NodeJS, GraphQL, React, Apollo
 
 #### [Nuber. Fullstack Javascript GraphQL Course | Nomad Coders](https://academy.nomadcoders.co/p/nuber-fullstack-javascript-graphql-course)
+
+### next.js
+
+### epress.js
+
+#### [[초급 풀스택] 유튜브 클론 코딩 | Nomad Coders](https://academy.nomadcoders.co/p/javascript-fullstack-from-zero-to-hero)
+
+- 유튜브 백엔드 클론 : MongoDB, NodeJS, ES6, AWS
+- 유튜브 프런트엔드 클론 : 100% Vanilla JS! SaSS, ES6, WebPack, Pug
+- 서버 배포 : Express, AWS, Heroku
