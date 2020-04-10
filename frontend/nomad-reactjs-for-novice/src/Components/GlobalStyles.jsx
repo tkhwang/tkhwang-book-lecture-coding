@@ -1,8 +1,8 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset"
 
 const globalStyles = createGlobalStyle`
-    ${reset}
+    ${reset};
     a{
         text-decoration:none;
         color:inherit;
@@ -11,11 +11,13 @@ const globalStyles = createGlobalStyle`
         box-sizing:border-box;
     }
     body{
-        font-family: 'JetBrain Mono';
-        font-size:'12px';
-        background-color:rgba(20, 20, 20, 1);
-        color:white;
-        padding-top:50px;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding:30px;
+    }
+    h1 {
+      font-size:32px;
+      margin-bottom:30px;
     }
 `
+
 export default globalStyles

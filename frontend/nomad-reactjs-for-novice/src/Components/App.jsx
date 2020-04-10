@@ -1,17 +1,14 @@
-import React, { Component } from "react"
-// import { HashRouter as Router, Route } from "react-router-dom"
-import Router from "Components/Router"
-import GlobalStyles from "Components/GlobalStyles"
+import React from "react"
+import Router from "./Router"
+import GlobalStyles from "./GlobalStyles"
 
-class App extends Component {
-	render() {
-		return (
-			<>
-				<Router />
-				<GlobalStyles />
-			</>
-		)
-	}
+function App() {
+	return (
+		<div>
+			<h1>Coin Explorer</h1>
+			<Router />
+			<GlobalStyles />
+		</div>
+	)
 }
-
 export default App

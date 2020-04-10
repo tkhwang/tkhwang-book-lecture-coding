@@ -1,50 +1,33 @@
 import React from "react"
+import { Link, withRouter } from "react-router-dom"
 import styled from "styled-components"
-import { Link } from 'react-router-dom'
 
 const Header = styled.header`
-	color:white;
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height: 50px;
-	display:flex;
-	align-items:center;
-	background-color:rgba(20, 20, 20, 0.8);
-	z-index: 10;
-	box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8)
+	margin-bottom: 30px;
 `
-
 const List = styled.ul`
 	display: flex;
 `
-
 const Item = styled.li`
-	width: 50px;
-	height: 50px;
-	text-align: center;
+	margin-right: 20px;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: ${(props) => (props.selected ? "white" : "black")};
+	background-color: ${(props) => (props.selected ? "#f1c40f" : "white")};
 `
 
-const SLink = styled(Link)`
-	height: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`
-
-export default () => (
-	<Header >
+export default withRouter(({ location: { pathname } }) => (
+	<Header>
 		<List>
-			<Item>
-				<SLink to="/">Home</SLink>
+			<Item selected={pathname === "/"}>
+				<Link to="/">Prices</Link>
 			</Item>
-			<Item>
-				<SLink to="/tv">TV</SLink>
+			<Item selected={pathname === "/exchanges"}>
+				<Link to="/exchanges">Exchanges</Link>
 			</Item>
-			<Item>
-				<SLink to="/search">Search</SLink>
+			<Item selected={pathname === "/coins"}>
+				<Link to="/coins">Coins</Link>
 			</Item>
 		</List>
 	</Header>
-)
+))
