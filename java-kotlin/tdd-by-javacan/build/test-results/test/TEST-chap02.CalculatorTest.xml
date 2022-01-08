@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="chap02.CalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-08T05:37:56" hostname="Taekeunui-MacBookPro.local" time="0.016">
+  <properties/>
+  <testcase name="plus()" classname="chap02.CalculatorTest" time="0.016"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
