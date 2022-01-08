@@ -19,4 +19,19 @@ public class Profile {
         answers.put(answer.getQuestionText(), answer);
     }
 
+    public boolean matches(Criteria criteria) {
+        score = 0;
+
+        boolean kill = false;
+        boolean anyMatches = false;
+
+        for (Criterion criterion) {
+            Answer answer = answers.get(
+                    criterion.getAnswer().getQuestionText()
+            );
+            boolean match = criterion.getWeight() == Weight.
+
+        }
+
+    }
 }
