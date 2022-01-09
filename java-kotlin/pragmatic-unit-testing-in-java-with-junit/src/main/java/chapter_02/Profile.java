@@ -80,10 +80,7 @@ public class Profile {
     private Answer answerMatching(Criterion criterion) {
         return answers.get(criterion.getAnswer().getQuestionText());
     }
-//
-//    private boolean matches(Criterion criterion, Answer answer) {
-//        return criterion.getWeight() == Weight.DontCare || answer.match(criterion.getAnswer());
-//    }
+
 
     public int score() {
         return score;
