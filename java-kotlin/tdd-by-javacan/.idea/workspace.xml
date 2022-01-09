@@ -5,34 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38123a97-10aa-4b7e-9588-829f847dd1d9" name="Changes" comment="Setup project using gradle">
-      <change afterPath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/test/java/chapter_02/ScoreCollectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/main/java/me/tkhwang/quickstartspringboot/QuickStartSpringBootApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/main/java/me/tkhwang/quickstartspringboot/controller/BoardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/test/java/me/tkhwang/quickstartspringboot/QuickStartSpringBootApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_01/ScoreCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_01/ScoreCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Criterion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Criterion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/src/main/java/me/tkhwang/quickstartspringboot/QuickStartSpringBootApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/src/test/java/me/tkhwang/quickstartspringboot/QuickStartSpringBootApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +160,7 @@
       <workItem from="1641619984721" duration="2371000" />
       <workItem from="1641649717166" duration="789000" />
       <workItem from="1641705187680" duration="676000" />
-      <workItem from="1641715100917" duration="462000" />
+      <workItem from="1641715100917" duration="751000" />
     </task>
     <task id="LOCAL-00001" summary="Setup project using gradle">
       <created>1641620311420</created>
