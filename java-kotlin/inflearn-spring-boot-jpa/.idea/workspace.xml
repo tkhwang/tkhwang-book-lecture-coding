@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="df96209b-54f1-42e0-88a9-af76101a03fa" name="Changes" comment="(step) 도메인 분석 설계 &gt; 도메인 분석 설계">
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_01/ScoreCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_01/Scoreable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Answer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/BooleanQuestion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Criteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Criterion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Profile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Question.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/ScoreCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Scoreable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Weight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/test/java/chapter_01/ScoreCollectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/test/java/chapter_02/ProfileTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/test/java/chapter_02/ScoreCollectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/Kotlin Koans/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/Kotlin Koans/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/main/java/me/tkhwang/quickstartspringboot/QuickStartSpringBootApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/main/java/me/tkhwang/quickstartspringboot/controller/BoardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/test/java/me/tkhwang/quickstartspringboot/QuickStartSpringBootApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/src/main/java/me/tkhwang/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/src/test/java/me/tkhwang/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/controller/BoardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/domain/BoardVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/service/BoardService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/service/BoardServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/service/LoggingRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/test/java/me/tkhwang/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/test/java/me/tkhwang/demo/PropertiesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/test/java/me/tkhwang/demo/controller/BoardControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/main/java/me/tkhwang/chap05/Chap05Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/main/java/me/tkhwang/chap05/domain/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/main/java/me/tkhwang/chap05/persistence/BoardRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/main/java/me/tkhwang/chap05/persistence/DynamicBoardRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/test/java/me/tkhwang/chap05/Chap05ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/test/java/me/tkhwang/chap05/persistence/BoardRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/test/java/me/tkhwang/chap05/persistence/DynamicBoardRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/test/java/me/tkhwang/chap05/persistence/QueryMethodTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="4" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="22AkRoT5jTEpUb4mprK7VsnvCyv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="showLigatures" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="jpabook.jpashop.domain" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="jpabook.jpashop" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.JpashopApplication">
+    <configuration name="MemberRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;jpabook.jpashop.MemberRepositoryTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MemberRepositoryTest.testMember" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;jpabook.jpashop.MemberRepositoryTest.testMember&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MemberRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jpashop.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jpabook.jpashop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jpabook.jpashop" />
+      <option name="MAIN_CLASS_NAME" value="jpabook.jpashop.MemberRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberRepositoryTest.testMember" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jpashop.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jpabook.jpashop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jpabook.jpashop" />
+      <option name="MAIN_CLASS_NAME" value="jpabook.jpashop.MemberRepositoryTest" />
+      <option name="METHOD_NAME" value="testMember" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JpashopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jpashop.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="jpabook.jpashop.JpashopApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MemberRepositoryTest.testMember" />
+        <item itemvalue="JUnit.MemberRepositoryTest" />
+        <item itemvalue="Gradle.MemberRepositoryTest" />
+        <item itemvalue="Gradle.MemberRepositoryTest.testMember" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df96209b-54f1-42e0-88a9-af76101a03fa" name="Changes" comment="" />
+      <created>1639287774850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639287774850</updated>
+      <workItem from="1639287776147" duration="853000" />
+      <workItem from="1639288635472" duration="9637000" />
+      <workItem from="1639489660722" duration="607000" />
+      <workItem from="1640180410800" duration="1746000" />
+      <workItem from="1640362561936" duration="830000" />
+      <workItem from="1640363732069" duration="598000" />
+      <workItem from="1640406864011" duration="591000" />
+      <workItem from="1640420156305" duration="598000" />
+      <workItem from="1640435499890" duration="1079000" />
+      <workItem from="1640507222527" duration="27000" />
+      <workItem from="1640507275703" duration="1792000" />
+      <workItem from="1640872125648" duration="896000" />
+      <workItem from="1640963067384" duration="43000" />
+      <workItem from="1641016882481" duration="4828000" />
+      <workItem from="1641103461479" duration="563000" />
+      <workItem from="1641107236609" duration="575000" />
+      <workItem from="1641216401024" duration="162000" />
+      <workItem from="1641216604396" duration="2189000" />
+      <workItem from="1641304220131" duration="2593000" />
+      <workItem from="1641567456083" duration="560000" />
+      <workItem from="1641569304759" duration="542000" />
+      <workItem from="1641571572284" duration="1150000" />
+      <workItem from="1641574758447" duration="598000" />
+      <workItem from="1642231961739" duration="102000" />
+    </task>
+    <task id="LOCAL-00001" summary="Import spring boot generated initial files">
+      <created>1639288003039</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639288003039</updated>
+    </task>
+    <task id="LOCAL-00002" summary="(step) 프로젝트 환경설정 &gt; 프로젝트 생성">
+      <created>1639289071469</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639289071469</updated>
+    </task>
+    <task id="LOCAL-00003" summary="(step) 프로젝트 환경설정 &gt; View 환경 설정">
+      <created>1639292436066</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639292436066</updated>
+    </task>
+    <task id="LOCAL-00004" summary="(fix) h2 database path problem">
+      <created>1639296496561</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639296496561</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Error 수정한 내용 정리한  Errors.md  파일 추가하기">
+      <created>1639314169996</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1639314169996</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Test code에서  @Transactional과 함께  @Rollback(false)  추가하기">
+      <created>1639314582789</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639314582789</updated>
+    </task>
+    <task id="LOCAL-00007" summary="(step) 프로젝트 환경설정 &gt; JPA와 DB 설정, 동작확인">
+      <created>1639315212881</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639315212881</updated>
+    </task>
+    <task id="LOCAL-00008" summary="(step) 섹션 4. 엔티티 매핑 &gt; 실전 예제 1 - 요구사항 분석과 기본 매핑">
+      <created>1641018573394</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1641018573394</updated>
+    </task>
+    <task id="LOCAL-00009" summary="(step) 도메인 분석 설계 &gt; 도메인 분석 설계">
+      <created>1641305005238</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1641305005238</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Import spring boot generated initial files" />
+    <MESSAGE value="(step) 프로젝트 환경설정 &gt; 프로젝트 생성" />
+    <MESSAGE value="(step) 프로젝트 환경설정 &gt; View 환경 설정" />
+    <MESSAGE value="(fix) h2 database path problem" />
+    <MESSAGE value="Error 수정한 내용 정리한  Errors.md  파일 추가하기" />
+    <MESSAGE value="Test code에서  @Transactional과 함께  @Rollback(false)  추가하기" />
+    <MESSAGE value="(step) 프로젝트 환경설정 &gt; JPA와 DB 설정, 동작확인" />
+    <MESSAGE value="(step) 섹션 4. 엔티티 매핑 &gt; 실전 예제 1 - 요구사항 분석과 기본 매핑" />
+    <MESSAGE value="(step) 도메인 분석 설계 &gt; 도메인 분석 설계" />
+    <option name="LAST_COMMIT_MESSAGE" value="(step) 도메인 분석 설계 &gt; 도메인 분석 설계" />
+  </component>
+</project>
