@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,6 +24,14 @@ class BoardRepositoryTest {
         board.setCnt(0L);
 
         boardRepository.save(board);
+    }
+
+    @Test
+    public void testQueryAnnotationTest1() {
+        List<Board> boardList = boardRepository.queryAnnotationTest("테스트 제목 10");
+        for (Board board : boardList) {
+            System.out.println("board = " + board.toString());
+        }
     }
 
 }
