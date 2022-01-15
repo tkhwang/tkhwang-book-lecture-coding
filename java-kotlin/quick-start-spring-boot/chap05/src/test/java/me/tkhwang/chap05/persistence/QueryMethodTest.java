@@ -41,4 +41,6 @@ public class QueryMethodTest {
             System.out.println("board = " + board.toString());
         }
     }
+
+
 }
