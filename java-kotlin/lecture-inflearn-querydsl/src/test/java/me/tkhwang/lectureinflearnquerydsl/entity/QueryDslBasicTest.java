@@ -4,6 +4,7 @@ import com.querydsl.core.QueryResults;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import me.tkhwang.lectureinflearnquerydsl.dto.MemberDto;
+import me.tkhwang.lectureinflearnquerydsl.dto.QMemberDto;
 import me.tkhwang.lectureinflearnquerydsl.dto.UserDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -218,7 +219,17 @@ public class QueryDslBasicTest {
         for (UserDto userDto : result) {
             System.out.println("userDto = " + userDto);
         }
-
     }
 
+    @Test
+    public void findUserDtoByQueryProjection() {
+        List<MemberDto> result = queryFactory
+                .select(new QMemberDto(member.username, member.age))
+                .from(member)
+                .fetch();
+
+        for (MemberDto memberDto : result) {
+            System.out.println("memberDto = " + memberDto);
+        }
+    }
 }
