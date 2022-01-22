@@ -2,6 +2,7 @@ package me.tkhwang.lectureinflearnquerydsl.entity;
 
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.QueryResults;
+import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import me.tkhwang.lectureinflearnquerydsl.dto.MemberDto;
@@ -244,6 +245,42 @@ public class QueryDslBasicTest {
         assertThat(result.size()).isEqualTo(1);
     }
 
+    @Test
+    public void dynamicQuery_whereParam() {
+        String usernameparam = "member1";
+        Integer ageparam = 10;
+
+        List<Member> result = searchMember2(usernameparam, ageparam);
+
+        assertThat(result.size()).isEqualTo(1);
+    }
+
+    private List<Member> searchMember2(String usernameCond, Integer ageCond) {
+        return queryFactory
+                .selectFrom(member)
+                .where(
+                        eqUsername(usernameCond), 
+                        eqAge(ageCond)
+                )
+                .fetch();
+    }
+
+    private Predicate eqUsername(String usernameCond) {
+        if (usernameCond == null) {
+            return null;
+        }
+
+        return member.username.eq(usernameCond);
+    }
+    private Predicate eqAge(Integer ageCond) {
+        if (ageCond == null) {
+            return null;
+        }
+
+        return member.age.eq(ageCond);
+    }
+
+
     private List<Member> searchMember1(String usernameCond, Integer ageCond) {
 
         BooleanBuilder builder = new BooleanBuilder();
@@ -260,4 +297,6 @@ public class QueryDslBasicTest {
                 .where(builder)
                 .fetch();
     }
+
+
 }
