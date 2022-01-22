@@ -1,8 +1,10 @@
 package me.tkhwang.lectureinflearnquerydsl.entity;
 
 import com.querydsl.core.QueryResults;
+import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import org.assertj.core.api.Assertions;
+import me.tkhwang.lectureinflearnquerydsl.dto.MemberDto;
+import me.tkhwang.lectureinflearnquerydsl.dto.UserDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +12,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
-
 import java.util.List;
 
 import static me.tkhwang.lectureinflearnquerydsl.entity.QMember.member;
-import static org.assertj.core.api.Assertions.*;
+import static me.tkhwang.lectureinflearnquerydsl.entity.QTeam.team;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @Transactional
@@ -128,4 +130,95 @@ public class QueryDslBasicTest {
         assertThat(results.getOffset()).isEqualTo(1);
         assertThat(results.getResults().size()).isEqualTo(2);
     }
+
+    @Test
+    public void join() {
+        List<Member> result = queryFactory
+                .selectFrom(member)
+                .join(member.team, team)
+                .where(team.name.eq("teamA"))
+                .fetch();
+
+        assertThat(result)
+                .extracting("username")
+                .containsExactly("member1", "member2");
+    }
+
+    @Test
+    public void findDtoByJPQL() {
+        // [1] new operation  문법
+        List<MemberDto> result = em.createQuery("select new me.tkhwang.lectureinflearnquerydsl.dto.MemberDto(m.username, m.age) from Member m ", MemberDto.class)
+                .getResultList();
+
+        for (MemberDto memberDto : result) {
+            System.out.println("memberDto = " + memberDto);
+        }
+    }
+
+    @Test
+    public void findDtoBySetter() {
+        List<MemberDto> result = queryFactory
+                .select(Projections.bean(
+                        MemberDto.class,
+                        member.username,
+                        member.age)
+                )
+                .from(member)
+                .fetch();
+
+        for (MemberDto memberDto : result) {
+            System.out.println("memberDto = " + memberDto);
+        }
+    }
+
+    @Test
+    public void findDtoByField() {
+        List<MemberDto> result = queryFactory
+                .select(Projections.fields(
+                        MemberDto.class,
+                        member.username,
+                        member.age)
+                )
+                .from(member)
+                .fetch();
+
+        for (MemberDto memberDto : result) {
+            System.out.println("memberDto = " + memberDto);
+        }
+    }
+
+
+    @Test
+    public void findDtoByConstructor() {
+        List<MemberDto> result = queryFactory
+                .select(Projections.constructor(
+                        MemberDto.class,
+                        member.username,
+                        member.age)
+                )
+                .from(member)
+                .fetch();
+
+        for (MemberDto memberDto : result) {
+            System.out.println("memberDto = " + memberDto);
+        }
+    }
+
+    @Test
+    public void findUserDtoByField() {
+        List<UserDto> result = queryFactory
+                .select(Projections.fields(
+                        UserDto.class,
+                        member.username.as("name"),
+                        member.age)
+                )
+                .from(member)
+                .fetch();
+
+        for (UserDto userDto : result) {
+            System.out.println("userDto = " + userDto);
+        }
+
+    }
+
 }
