@@ -51,4 +51,6 @@ class MemberJpaRepositoryTest {
         List<Member> result2 = this.memberJpaRepository.findByUsername_queryDsl("member1");
         assertThat(result2).containsExactly(member);
     }
+
+
 }
