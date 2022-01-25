@@ -4,6 +4,10 @@ import lombok.RequiredArgsConstructor;
 import me.tkhwang.lectureinflearnquerydsl.dto.MemberSearchCondition;
 import me.tkhwang.lectureinflearnquerydsl.dto.MemberTeamDto;
 import me.tkhwang.lectureinflearnquerydsl.repository.MemberJpaRepository;
+import me.tkhwang.lectureinflearnquerydsl.repository.MemberRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -13,8 +17,20 @@ import java.util.List;
 public class MemberController {
 
     private final MemberJpaRepository memberJpaRepository;
+    private final MemberRepository memberRepository;
 
-    public List<MemberTeamDto> searchMember1(MemberSearchCondition condition) {
-        return this.memberJpaRepository.searchByWhere(condition);
+    @GetMapping("/v1/members")
+    public List<MemberTeamDto> searchMemberV1(MemberSearchCondition condition) {
+        return memberJpaRepository.searchByWhere(condition);
+    }
+
+    @GetMapping("/v2/members")
+    public Page<MemberTeamDto> searchMemberV2(MemberSearchCondition condition, Pageable page) {
+        return memberRepository.searchPageSimple(condition, page);
+    }
+
+    @GetMapping("/v3/members")
+    public Page<MemberTeamDto> searchMemberV3(MemberSearchCondition condition, Pageable page) {
+        return memberRepository.searchPageComplex(condition, page);
     }
 }
