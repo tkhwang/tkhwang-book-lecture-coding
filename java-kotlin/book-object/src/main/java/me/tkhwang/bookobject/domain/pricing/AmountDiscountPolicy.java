@@ -3,7 +3,7 @@ package me.tkhwang.bookobject.domain.pricing;
 import me.tkhwang.bookobject.domain.Money;
 import me.tkhwang.bookobject.domain.Screening;
 
-public class AmountDiscountPolicy extends DiscountPolicy {
+public class AmountDiscountPolicy extends DefaultDiscountPolicy {
 
     private Money discountAmount;
 
