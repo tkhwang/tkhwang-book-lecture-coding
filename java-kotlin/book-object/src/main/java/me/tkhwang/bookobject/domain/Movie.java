@@ -1,6 +1,7 @@
 package me.tkhwang.bookobject.domain;
 
-import javax.management.Query;
+import me.tkhwang.bookobject.domain.pricing.DiscountPolicy;
+
 import java.time.Duration;
 
 public class Movie {

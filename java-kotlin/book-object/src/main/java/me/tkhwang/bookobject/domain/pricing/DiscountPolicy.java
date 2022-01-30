@@ -1,4 +1,7 @@
-package me.tkhwang.bookobject.domain;
+package me.tkhwang.bookobject.domain.pricing;
+
+import me.tkhwang.bookobject.domain.Money;
+import me.tkhwang.bookobject.domain.Screening;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,7 +22,7 @@ public abstract class DiscountPolicy {
             }
         }
 
-        return Money.Zero;
+        return Money.ZERO;
     }
 
     abstract  protected Money getDiscountAmount(Screening screening);

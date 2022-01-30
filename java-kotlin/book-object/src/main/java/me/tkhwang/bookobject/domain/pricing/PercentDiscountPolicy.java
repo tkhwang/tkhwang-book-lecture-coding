@@ -1,4 +1,9 @@
-package me.tkhwang.bookobject.domain;
+package me.tkhwang.bookobject.domain.pricing;
+
+import me.tkhwang.bookobject.domain.Money;
+import me.tkhwang.bookobject.domain.Screening;
+import me.tkhwang.bookobject.domain.pricing.DiscountCondition;
+import me.tkhwang.bookobject.domain.pricing.DiscountPolicy;
 
 public class PercentDiscountPolicy extends DiscountPolicy {
 

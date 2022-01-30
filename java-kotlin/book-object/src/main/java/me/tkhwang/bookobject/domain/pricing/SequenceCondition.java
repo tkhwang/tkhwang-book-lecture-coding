@@ -1,4 +1,7 @@
-package me.tkhwang.bookobject.domain;
+package me.tkhwang.bookobject.domain.pricing;
+
+import me.tkhwang.bookobject.domain.Screening;
+import me.tkhwang.bookobject.domain.pricing.DiscountCondition;
 
 public class SequenceCondition implements DiscountCondition {
     private int sequence;
