@@ -1,4 +1,7 @@
-package me.tkhwang.bookobject.domain;
+package me.tkhwang.bookobject.domain.pricing;
+
+import me.tkhwang.bookobject.domain.Screening;
+import me.tkhwang.bookobject.domain.pricing.DiscountCondition;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;

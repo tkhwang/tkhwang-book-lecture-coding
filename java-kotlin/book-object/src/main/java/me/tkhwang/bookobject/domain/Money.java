@@ -3,7 +3,7 @@ package me.tkhwang.bookobject.domain;
 import java.math.BigDecimal;
 
 public class Money {
-    public static final Money Zero = Money.wons(0L);
+    public static final Money ZERO = Money.wons(0L);
 
     private final BigDecimal amount;
 
