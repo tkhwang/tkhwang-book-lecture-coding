@@ -4,87 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df96209b-54f1-42e0-88a9-af76101a03fa" name="Changes" comment="(step) 도메인 분석 설계 &gt; 도메인 분석 설계">
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_01/ScoreCollection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_01/Scoreable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Answer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/BooleanQuestion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Criteria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Criterion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Profile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Question.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/ScoreCollection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Scoreable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/java/chapter_02/Weight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/test/java/chapter_01/ScoreCollectionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/test/java/chapter_02/ProfileTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pragmatic-unit-testing-in-java-with-junit/src/test/java/chapter_02/ScoreCollectionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/Kotlin Koans/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/Kotlin Koans/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/main/java/me/tkhwang/quickstartspringboot/QuickStartSpringBootApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/main/java/me/tkhwang/quickstartspringboot/controller/BoardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap01/src/test/java/me/tkhwang/quickstartspringboot/QuickStartSpringBootApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/src/main/java/me/tkhwang/demo/DemoApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap02/src/test/java/me/tkhwang/demo/DemoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/DemoApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/controller/BoardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/domain/BoardVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/service/BoardService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/service/BoardServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/java/me/tkhwang/demo/service/LoggingRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/test/java/me/tkhwang/demo/DemoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/test/java/me/tkhwang/demo/PropertiesTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap03/src/test/java/me/tkhwang/demo/controller/BoardControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/main/java/me/tkhwang/chap05/Chap05Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/main/java/me/tkhwang/chap05/domain/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/main/java/me/tkhwang/chap05/persistence/BoardRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/main/java/me/tkhwang/chap05/persistence/DynamicBoardRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/test/java/me/tkhwang/chap05/Chap05ApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/test/java/me/tkhwang/chap05/persistence/BoardRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/test/java/me/tkhwang/chap05/persistence/DynamicBoardRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quick-start-spring-boot/chap05/src/test/java/me/tkhwang/chap05/persistence/QueryMethodTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="df96209b-54f1-42e0-88a9-af76101a03fa" name="Changes" comment="(step) 도메인 분석 설계 &gt; 도메인 분석 설계" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -317,6 +237,7 @@
       <workItem from="1641571572284" duration="1150000" />
       <workItem from="1641574758447" duration="598000" />
       <workItem from="1642231961739" duration="102000" />
+      <workItem from="1643515806725" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Import spring boot generated initial files">
       <created>1639288003039</created>
