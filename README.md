@@ -2,5 +2,10 @@
 
 책을 보거나 강좌 들으면서 coding 연습 !!!
 
-- [Java/Kotlin](./java-kotlin/README.md)
-- [Javascript/TypeScript](./js-ts/README.md)
+## [Language](./language_framework/)
+
+- [Java/Kotlin](./language_framework/java-kotlin)
+- [Javascript/TypeScript](./language_framework/js-ts)
+
+## [Architectures](./architecture)
+
