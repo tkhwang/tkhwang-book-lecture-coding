@@ -1,11 +1,19 @@
 import AppLoading from "expo-app-loading";
 import React, { useState } from "react";
 import { Text } from "react-native";
+import * as Font from "expo-font";
+import { Ionicons } from "@expo/vector-icons";
+import { App } from "expo-asset";
 
 export default function App() {
   const [ready, setReady] = useState(false);
+
   const onFinish = () => setReady(true);
-  const startLoading = async () => {};
+  const startLoading = async () => {
+    await Font.loadAsync(Ionicons.font);
+    await Assets.loadAsync(require("./long-long-ago.jpg"));
+  };
+
   if (!ready) {
     return (
       <AppLoading
@@ -17,4 +25,3 @@ export default function App() {
   }
   return <Text>We are done loading!</Text>;
 }
- 
