@@ -1,29 +1,29 @@
 # tkhwang-book-lecture-coding
 
-책을 보거나 강좌 들으면서 coding 연습 !!!
+coding with reading books and studying lectures 🚀
 
-## [Language](./language/)
+## Language
 
-### Typescript
-
-#### [Typescript](./language/ts/beginners-typescript-tutorial/)
-
-- ref: [Beginner's TypeScript Tutorial | Total TypeScript](https://www.totaltypescript.com/tutorials/beginners-typescript)
+- Typescript
 
 ## [Framework](./framework/)
 
 ### nest.js
 
-### Node.js
+### node.js
 
-#### [socket: nomad-zoom-clone-coding](./framework/js-ts/node.js/nomad-zoom-clone-coding/)
+### react-native
 
-- ref: [줌 클론코딩 – 노마드 코더 Nomad Coders](https://nomadcoders.co/noom)
+- [ ] [nomad react-native-masterclass](./framework/js-ts/react-native/react-native-masterclass/)
 
-## [Architectures](./architecture/)
+### socket programming
+
+- [ ] [socket: nomad-zoom-clone-coding](./framework/js-ts/node.js/nomad-zoom-clone-coding/)
+
+## Architectures
 
 ## DevOps
 
 ### Docker
 
-* [도커의 교과서](./devops/book-learn-docker-in-a-month-of-lunches/)
+- [ ] [도커의 교과서](./devops/book-learn-docker-in-a-month-of-lunches/)
