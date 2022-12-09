@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Text } from "react-native";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
-import { App } from "expo-asset";
+import { Asset } from "expo-asset";
 
 export default function App() {
   const [ready, setReady] = useState(false);
@@ -11,7 +11,7 @@ export default function App() {
   const onFinish = () => setReady(true);
   const startLoading = async () => {
     await Font.loadAsync(Ionicons.font);
-    await Assets.loadAsync(require("./long-long-ago.jpg"));
+    await Asset.loadAsync(require("./long-long-ago.jpg"));
   };
 
   if (!ready) {
