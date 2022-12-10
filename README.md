@@ -4,9 +4,9 @@ coding with reading books and studying lectures 🚀
 
 ## Language
 
-- Typescript
+- typescript
 
-## [Framework](./framework/)
+## Framework
 
 ### nest.js
 
@@ -15,6 +15,7 @@ coding with reading books and studying lectures 🚀
 ### react-native
 
 - [ ] [nomad react-native-masterclass](./framework/js-ts/react-native/react-native-masterclass/)
+- [ ] [김범준의 핸즈온 리액트 네이티드](./framework/js-ts/react-native/book-hands-on-react-native)
 
 ### socket programming
 
