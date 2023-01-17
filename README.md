@@ -20,6 +20,10 @@ coding with reading books and studying lectures 🚀
 
 ### node.js
 
+### react.js
+
+- [ ] [(book) 리액트 모던 웹 개발 with 타입스크립트](./framework/js-ts/react.js/book-react-modern-web-development-with-typescript/)
+
 ### react-native
 
 - [ ] [(lecture) nomad react-native-masterclass](./framework/js-ts/react-native/react-native-masterclass/)
@@ -40,3 +44,6 @@ coding with reading books and studying lectures 🚀
 - [ ] [(book) 도커의 교과서](./devops/book-learn-docker-in-a-month-of-lunches/)
 
 ## 🏛️ Architectures
+
+- [x] (book) 만들면서 배우는 클린 아키텍쳐
+- [x] (book) 도메인 주도 설계 철저 입문
