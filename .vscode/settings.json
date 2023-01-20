@@ -1,3 +1,10 @@
 {
-  "conventionalCommits.scopes": ["config", "common"]
+  "conventionalCommits.scopes": [
+    "config",
+    "common",
+    "typescript",
+    "react.js",
+    "nest.js",
+    "react-native"
+  ]
 }
