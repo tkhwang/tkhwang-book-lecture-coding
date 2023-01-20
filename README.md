@@ -8,9 +8,9 @@ coding with reading books and studying lectures 🚀
 
 - [ ] [(book) 자바스크립트로 배우는 SICP - 컴퓨터 프로그램의 구조와 해석](./language/js/book-structure-interpretation-of-computer-programs-javascript-edition/)
 
-## 🔈 Language
+### typescript
 
-- typescript
+- [ ] [(book) 파이브 라인스 오브 코드 (five lines of Code)](./language/ts/book-five-lines-of-code/)
 
 ## 🏠 Framework
 
