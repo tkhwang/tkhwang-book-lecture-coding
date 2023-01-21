@@ -125,14 +125,19 @@ function update() {
 }
 
 function draw() {
-  let canvas = document.getElementById("GameCanvas") as HTMLCanvasElement;
-  let g = canvas.getContext("2d");
-
-  g.clearRect(0, 0, canvas.width, canvas.height);
+  let g = createGraphics();
 
   drawMap(g);
 
   drawPlayer(g);
+}
+
+function createGraphics() {
+  let canvas = document.getElementById("GameCanvas") as HTMLCanvasElement;
+  let g = canvas.getContext("2d");
+
+  g.clearRect(0, 0, canvas.width, canvas.height);
+  return g;
 }
 
 function drawPlayer(g: CanvasRenderingContext2D) {
