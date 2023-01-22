@@ -30,6 +30,7 @@ interface Tile {
   isLock1(): boolean;
   isKey2(): boolean;
   isLock2(): boolean;
+  color(g: CanvasRenderingContext2D): void;
 }
 
 class Air implements Tile {
@@ -69,7 +70,9 @@ class Air implements Tile {
   isLock2() {
     return false;
   }
+  color(g: CanvasRenderingContext2D) {}
 }
+
 class Flux implements Tile {
   isAir() {
     return false;
@@ -106,6 +109,9 @@ class Flux implements Tile {
   }
   isLock2() {
     return false;
+  }
+  color(g: CanvasRenderingContext2D) {
+    g.fillStyle = "#ccffcc";
   }
 }
 class Unbreakable implements Tile {
@@ -145,6 +151,9 @@ class Unbreakable implements Tile {
   isLock2() {
     return false;
   }
+  color(g: CanvasRenderingContext2D) {
+    g.fillStyle = "#999999";
+  }
 }
 class Player implements Tile {
   isAir() {
@@ -183,6 +192,7 @@ class Player implements Tile {
   isLock2() {
     return false;
   }
+  color(g: CanvasRenderingContext2D) {}
 }
 class Stone implements Tile {
   isAir() {
@@ -220,6 +230,9 @@ class Stone implements Tile {
   }
   isLock2() {
     return false;
+  }
+  color(g: CanvasRenderingContext2D) {
+    g.fillStyle = "#0000cc";
   }
 }
 class FallingStone implements Tile {
@@ -259,6 +272,9 @@ class FallingStone implements Tile {
   isLock2() {
     return false;
   }
+  color(g: CanvasRenderingContext2D) {
+    g.fillStyle = "#0000cc";
+  }
 }
 class Box implements Tile {
   isAir() {
@@ -296,6 +312,9 @@ class Box implements Tile {
   }
   isLock2() {
     return false;
+  }
+  color(g: CanvasRenderingContext2D) {
+    g.fillStyle = "#8b4513";
   }
 }
 class FallingBox implements Tile {
@@ -335,6 +354,9 @@ class FallingBox implements Tile {
   isLock2() {
     return false;
   }
+  color(g: CanvasRenderingContext2D) {
+    g.fillStyle = "#8b4513";
+  }
 }
 class Key1 implements Tile {
   isAir() {
@@ -372,6 +394,9 @@ class Key1 implements Tile {
   }
   isLock2() {
     return false;
+  }
+  color(g: CanvasRenderingContext2D) {
+    g.fillStyle = "#ffcc00";
   }
 }
 class Lock1 implements Tile {
@@ -411,6 +436,9 @@ class Lock1 implements Tile {
   isLock2() {
     return false;
   }
+  color(g: CanvasRenderingContext2D) {
+    g.fillStyle = "#ffcc00";
+  }
 }
 class Key2 implements Tile {
   isAir() {
@@ -449,6 +477,9 @@ class Key2 implements Tile {
   isLock2() {
     return false;
   }
+  color(g: CanvasRenderingContext2D) {
+    g.fillStyle = "#00ccff";
+  }
 }
 class Lock2 implements Tile {
   isAir() {
@@ -486,6 +517,9 @@ class Lock2 implements Tile {
   }
   isLock2() {
     return true;
+  }
+  color(g: CanvasRenderingContext2D) {
+    g.fillStyle = "#00ccff";
   }
 }
 
