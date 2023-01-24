@@ -48,9 +48,16 @@ coding with reading books and studying lectures 🚀
 
 - [x] ✅ (book) 오브젝트
 - [x] ✅ (book) 엘레강트 오브젝트
+
+### 🏥 clean series
+
+- [x] ✅ (book) clean code
+- [x] ✅ (book) clean architecture
 - [x] ✅ (book) 만들면서 배우는 클린 아키텍쳐
+
+### 📦 DDD (domain driven design)
+
 - [x] ✅ (book) 도메인 주도 설계 철저 입문
-- [x] ✅ (book) 만들면서 배우는 클린 아키텍쳐
 
 ## 💻 General
 
