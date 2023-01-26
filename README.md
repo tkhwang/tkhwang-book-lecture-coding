@@ -13,6 +13,10 @@ coding with reading books and studying lectures 🚀
 
 - [ ] [(book) 파이브 라인스 오브 코드 (five lines of Code)](./language/ts/book-five-lines-of-code/)
 
+## 🥑 Algorithms and data-structures
+
+- [x] ✅ (book) 코딩 인터뷰를 위한 알고리즘 치트시트
+
 ## 🏠 Framework
 
 ### node.js
