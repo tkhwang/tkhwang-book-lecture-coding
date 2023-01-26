@@ -20,6 +20,7 @@ coding with reading books and studying lectures 🚀
 ### react.js
 
 - [ ] [(book) 리액트 모던 웹 개발 with 타입스크립트](./framework/js-ts/react.js/book-react-modern-web-development-with-typescript/)
+- [ ] [(book) 실전에서 바로 쓰는 Next.js](./framework/js-ts/react.js/book-read-world-nextjs/)
 
 ### nest.js
 
@@ -48,12 +49,12 @@ coding with reading books and studying lectures 🚀
 
 - [x] ✅ (book) 오브젝트
 - [x] ✅ (book) 엘레강트 오브젝트
+- [x] ✅ (book) 만들면서 배우는 클린 아키텍쳐
 
 ### 🏥 clean series
 
 - [x] ✅ (book) clean code
 - [x] ✅ (book) clean architecture
-- [x] ✅ (book) 만들면서 배우는 클린 아키텍쳐
 
 ### 📦 DDD (domain driven design)
 
