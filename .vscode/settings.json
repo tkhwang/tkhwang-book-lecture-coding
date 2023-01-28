@@ -5,6 +5,7 @@
     "typescript",
     "react.js",
     "nest.js",
-    "react-native"
+    "react-native",
+    "next.js"
   ]
 }
