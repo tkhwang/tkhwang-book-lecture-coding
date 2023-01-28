@@ -15,7 +15,7 @@ coding with reading books and studying lectures 🚀
 
 ## 🥑 Algorithms and data-structures
 
-- [x] ✅ (book) 코딩 인터뷰를 위한 알고리즘 치트시트
+- [x] ✅ (book) 코딩 인터뷰를 위한 알고리즘 치트시트 👍
 
 ## 🏠 Framework
 
@@ -41,17 +41,13 @@ coding with reading books and studying lectures 🚀
 
 ## 🚀 DevOps
 
-### Serverless
-
-- [ ] [(book) 서버리스 이제는 AWS Lambda로 간다](./devops/book-serverless-aws-lambda/)
-
 ### Docker
 
 - [ ] [(book) 도커의 교과서](./devops/book-learn-docker-in-a-month-of-lunches/)
 
 ## 🏛️ Design & Architectures
 
-- [x] ✅ (book) 오브젝트
+- [x] ✅ (book) 오브젝트 👍
 - [x] ✅ (book) 엘레강트 오브젝트
 - [x] ✅ (book) 만들면서 배우는 클린 아키텍쳐
 
@@ -68,3 +64,6 @@ coding with reading books and studying lectures 🚀
 
 - [x] ✅ (book) 프로그래머의 뇌
 - [x] ✅ (book) 좋은 코드, 나쁜 코드
+- [x] (✅ 23/01/28) (book) 클린 코드의 기술 👍
+  - 개발서를 가장(?)한 자기 계발서.
+  - 클린한 작은 코드의 위대함. 20-80법칙. MVP 의미. 집중.
