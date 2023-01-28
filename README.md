@@ -24,7 +24,10 @@ coding with reading books and studying lectures 🚀
 ### react.js
 
 - [ ] [(book) 리액트 모던 웹 개발 with 타입스크립트](./framework/js-ts/react.js/book-react-modern-web-development-with-typescript/)
-- [ ] [(book) 실전에서 바로 쓰는 Next.js](./framework/js-ts/react.js/book-read-world-nextjs/)
+
+### next.js
+
+- [ ] [(book) 실전에서 바로 쓰는 Next.js](./framework/js-ts/next.js/book-read-world-nextjs/)
 
 ### nest.js
 
