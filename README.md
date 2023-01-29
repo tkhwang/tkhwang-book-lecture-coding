@@ -2,6 +2,32 @@
 
 coding with reading books and studying lectures 🚀
 
+## 💻 General
+
+- [x] ✅ (book) 프로그래머의 뇌
+- [x] ✅ (book) 좋은 코드, 나쁜 코드
+- [x] ✅ (book) 클린 코드의 기술 👍
+  - 23/01/28
+    - 개발서를 가장(?)한 자기 계발서.
+    - 학습 쇼핑(?)이 아니라 실제 프로젝트를 진행 (70%) 하면서 필요한 내용을 학습 (30%) 하기
+    - 클린한 작은 코드의 위대함. 20-80법칙. MVP 의미. 집중.
+
+## 🏛️ Design & Architectures
+
+- [x] ✅ (book) 오브젝트 👍
+- [x] ✅ (book) 엘레강트 오브젝트
+- [x] ✅ (book) 만들면서 배우는 클린 아키텍쳐
+- [x] ✅ (book) 오브젝트 디자인 스타일 가이드
+
+### 🏥 clean series
+
+- [x] ✅ (book) clean code
+- [x] ✅ (book) clean architecture
+
+### 📦 DDD (domain driven design)
+
+- [x] ✅ (book) 도메인 주도 설계 철저 입문
+
 ## 💌 Language
 
 ### javascript
@@ -16,6 +42,10 @@ coding with reading books and studying lectures 🚀
 ## 🥑 Algorithms and data-structures
 
 - [x] ✅ (book) 코딩 인터뷰를 위한 알고리즘 치트시트 👍
+
+## 🔎 Testing
+
+- [x] ✅ (book) 단위 테스트 - 생산성과 품질을 위한 단위 테스트 원칙과 패턴 👍
 
 ## 🏠 Framework
 
@@ -47,28 +77,3 @@ coding with reading books and studying lectures 🚀
 ### Docker
 
 - [ ] [(book) 도커의 교과서](./devops/book-learn-docker-in-a-month-of-lunches/)
-
-## 🏛️ Design & Architectures
-
-- [x] ✅ (book) 오브젝트 👍
-- [x] ✅ (book) 엘레강트 오브젝트
-- [x] ✅ (book) 만들면서 배우는 클린 아키텍쳐
-
-### 🏥 clean series
-
-- [x] ✅ (book) clean code
-- [x] ✅ (book) clean architecture
-
-### 📦 DDD (domain driven design)
-
-- [x] ✅ (book) 도메인 주도 설계 철저 입문
-
-## 💻 General
-
-- [x] ✅ (book) 프로그래머의 뇌
-- [x] ✅ (book) 좋은 코드, 나쁜 코드
-- [x] ✅ (book) 클린 코드의 기술 👍
-  - 23/01/28
-    - 개발서를 가장(?)한 자기 계발서.
-    - 학습 쇼핑(?)이 아니라 실제 프로젝트를 진행 (70%) 하면서 필요한 내용을 학습 (30%) 하기
-    - 클린한 작은 코드의 위대함. 20-80법칙. MVP 의미. 집중.
