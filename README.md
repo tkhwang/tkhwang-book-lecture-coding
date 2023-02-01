@@ -42,6 +42,7 @@ coding with reading books and studying lectures 🚀
 ## 🥑 Algorithms and data-structures
 
 - [x] ✅ (book) 코딩 인터뷰를 위한 알고리즘 치트시트 👍
+- [ ] [(book) 자바스크립트로 하는 자료 구조와 알고리즘](./algorithms/book-js-data-structures-and-algorithms/)
 
 ## 🔎 Testing
 
