@@ -3,16 +3,17 @@ import {
   KeyboardAvoidingView,
   StyleSheet,
   Text,
+  Platform,
   View,
+  Pressable,
+  Keyboard,
 } from "react-native";
 import Input, { KeyboardType, ReturnKeyTypes } from "../components/Input";
+import SafeInputView from "../components/SafeInputView";
 
 const SignInScreen = () => {
   return (
-    <KeyboardAvoidingView
-      style={{ flex: 1 }}
-      behavior={Platform.select({ ios: "padding" })}
-    >
+    <SafeInputView>
       <View style={styles.container}>
         <Image source={require("../../assets/main.png")} style={styles.image} />
 
@@ -28,7 +29,7 @@ const SignInScreen = () => {
           secureTextEntry
         />
       </View>
-    </KeyboardAvoidingView>
+    </SafeInputView>
   );
 };
 
