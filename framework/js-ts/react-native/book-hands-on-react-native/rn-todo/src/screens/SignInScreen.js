@@ -14,12 +14,34 @@ import Input, {
   ReturnKeyTypes,
 } from "../components/Input";
 import SafeInputView from "../components/SafeInputView";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Button from "../components/Button";
+import { signIn } from "../api/auth";
 
 const SignInScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const passwordRef = useRef(null);
+  const [disabled, setDisabled] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setDisabled(!email || !password);
+  }, [email, password]);
+
+  const onSubmit = async () => {
+    if (!isLoading && !disabled) {
+      try {
+        setIsLoading(true);
+        Keyboard.dismiss();
+        const data = await signIn(email, password);
+        console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
+      setIsLoading(false);
+    }
+  };
 
   return (
     <SafeInputView>
@@ -44,7 +66,16 @@ const SignInScreen = () => {
           value={password}
           onChangeText={(password) => setPassword(password.trim())}
           iconName={IconNames.LOCK}
+          onSubmitEditing={onSubmit}
         />
+        <View style={styles.buttonContainer}>
+          <Button
+            title={"로그인"}
+            onPress={onSubmit}
+            disabled={disabled}
+            isLoading={isLoading}
+          />
+        </View>
       </View>
     </SafeInputView>
   );
