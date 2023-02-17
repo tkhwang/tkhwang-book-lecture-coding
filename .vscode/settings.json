@@ -6,6 +6,7 @@
     "react.js",
     "nest.js",
     "react-native",
-    "next.js"
+    "next.js",
+    "test"
   ]
 }
