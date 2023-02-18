@@ -4,4 +4,4 @@
 
 [테스트 주도 개발 시작하기](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=233614629)
 
-- 책은 Java (JUnit) 이지만 js jest 이용해서 해보기.
+- 책은 Java (JUnit) 이지만 ts jest 이용해서 해보기.
