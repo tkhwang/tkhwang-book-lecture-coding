@@ -78,3 +78,7 @@ coding with reading books and studying lectures 🚀
 ### Docker
 
 - [ ] [(book) 도커의 교과서](./devops/book-learn-docker-in-a-month-of-lunches/)
+
+## 🏦 SQL
+
+- [ ] [(book) 실용 SQL](./sql/book-practical-sql/)
