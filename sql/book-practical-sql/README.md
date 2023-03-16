@@ -6,6 +6,24 @@ PostgreSQL로 시작하는 데이터 스토리텔링 가이드북
 
 [실용 SQL](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=308665691)
 
+## Chapter 6 : SQL 사용한 기본 수학 및 통계
+
+#### 백분위수 함수
+
+```sql
+percentile_cont(.X)
+    WITHIN GROUP (ORDER BY column_name)
+```
+
+```sql
+SELECT
+    percentile_cont(.5)
+    WITHIN GROUP (ORDER BY numbers),
+    percentile_disc(.5)
+    WITHIN GROUP (ORDER BY numbers)
+FROM percentile_test;
+```
+
 ## Chapter 7 : JOIN
 
 #### JOIN (INNER JOIN)
@@ -133,4 +151,42 @@ SELECT year, month, citrus_export_value,
        AS twelve_month_avg
 FROM us_exports
 ORDER BY year, month;
+```
+
+## Chapter 13. 고급 쿼리 기술
+
+#### Sub query : derived table
+
+```sql
+SELECT round(calcs.average, 0) as average
+       , calcs.median
+       , round(calcs.average - calcs.median, 0) AS median_average_diff
+FROM (
+     SELECT avg(pop_est_2019) AS average
+            , percentile_cont(.5) WITHIN GROUP (ORDER BY pop_est_2019)::numeric AS median
+     FROM us_counties_pop_est_2019
+     )
+AS calcs;
+```
+
+#### CTE (Common Table Expression)
+
+`WITH ... AS`
+
+```sql
+WITH large_counties (country_name, state_name, pop_est_2019)
+AS (
+    SELECT
+        county_name
+        , state_name
+        , pop_est_2019
+    FROM us_counties_pop_est_2019
+    WHERE pop_est_2019 >= 10000
+)
+SELECT
+    state_name
+    , count(*)
+FROM large_counties
+GROUP BY state_name
+ORDER BY count(*) DESC;
 ```
