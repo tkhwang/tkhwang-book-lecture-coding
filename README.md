@@ -81,6 +81,7 @@ coding with reading books and studying lectures 🚀
 
 - ✅ [(book) 실용 SQL](./sql/book-practical-sql/)
 - [ ] [(book) Learning SQL]()
+- [ ] [(book) 누구나 쉽게 SQL](./sql/book-a-common-sense-guide-to-sql/)
 
 ## 🚀 DevOps
 
