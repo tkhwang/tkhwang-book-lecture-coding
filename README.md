@@ -43,6 +43,7 @@ coding with reading books and studying lectures 🚀
 
 - ✅ (book) [코딩 인터뷰를 위한 알고리즘 치트시트](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=301923855) 👍
 - ✅ (book) [문제 해결력을 높이는 알고리즘과 자료 구조](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=289274245)
+- [ ] [(book) the recursive book of recursion](./algorithms/book-the-recursive-book-of-recursion/)
 
 ## 🪚 Refactoring
 
