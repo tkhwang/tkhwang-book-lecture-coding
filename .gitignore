@@ -120,3 +120,9 @@ beginners-typescript-tutorial-org
 
 _org
 /language/ts/book-five-lines-of-code/part1/index.js
+
+# dotenv environment variables file
+.env
+.env.development
+.env.staging
+.env.production
