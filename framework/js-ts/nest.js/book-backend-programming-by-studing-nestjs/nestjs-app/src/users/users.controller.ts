@@ -1,72 +1,36 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Res, HttpCode, NotFoundException, Header, Redirect, Query, BadRequestException } from '@nestjs/common';
-import { UsersService } from './users.service';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
-import { GetUsersDto } from './dto/get-users.dto';
+import { UserLoginDto } from './dto/user-login.dto';
+import { VerifyEmailDto } from './dto/verify-email.dto';
+import { UserInfo } from './UserInfo';
+import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
-  constructor(private readonly usersService: UsersService) { }
+  constructor(private usersService: UsersService) { }
 
   @Post()
-  create(@Body() createUserDto: CreateUserDto) {
-    const { name, email } = createUserDto;
-
-    return `유저를 생성했습니다. 이름: ${name}, 이메일: ${email}`;
+  async createUser(@Body() dto: CreateUserDto): Promise<void> {
+    const { name, email, password } = dto;
+    await this.usersService.createUser(name, email, password);
   }
 
-  @Get()
-  findAll(@Res() res, @Query() dto: GetUsersDto) {
-    console.log(dto);
+  @Post('/email-verify')
+  async verifyEmail(@Query() dto: VerifyEmailDto): Promise<string> {
+    const { signupVerifyToken } = dto;
 
-    const users = this.usersService.findAll()
-
-    return res.status(200).send(users);
+    return await this.usersService.verifyEmail(signupVerifyToken);
   }
 
-  // @Get(':id')
-  // findOne(@Param('id') id: string) {
-  //   if (+id < 1) {
-  //     throw new BadRequestException('id는 0보다 큰 값이어야 합니다.');
-  //   }
+  @Post('/login')
+  async login(@Body() dto: UserLoginDto): Promise<string> {
+    const { email, password } = dto;
 
-  //   return this.usersService.findOne(+id);
-  // }
-
-  // @Header('Custom', 'Test Header')
-  // @Get(':id')
-  // findOneWithHeader(@Param('id') id: string) {
-  //   return this.usersService.findOne(+id);
-  // }
-
-  @Redirect('https://nestjs.com', 301)
-  @Get(':id')
-  findOneRedirection(@Param('id') id: string) {
-    return this.usersService.findOne(+id);
+    return await this.usersService.login(email, password);
   }
 
-  @HttpCode(202)
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.usersService.update(+id, updateUserDto);
+  @Get('/:id')
+  async getUserInfo(@Param('id') userId: string): Promise<UserInfo> {
+    return await this.usersService.getUserInfo(userId);
   }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.usersService.remove(+id);
-  }
-
-  // @Delete(':userId/memo/:memoId')
-  // deleteUserMemo(@Param() params: { [key: string]: string }) {
-  //   return `userId: ${params.userId}, memoId: ${params.memoId}`;
-  // }
-
-  @Delete(':userId/memo/:memoId')
-  deleteUserMemo(
-    @Param('userId') userId: string,
-    @Param('memoId') memoId: string,
-  ) {
-    return `userId: ${userId}, memoId: ${memoId}`;
-  }
-
 }
