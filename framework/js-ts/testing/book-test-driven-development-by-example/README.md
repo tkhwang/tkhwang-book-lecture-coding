@@ -9,6 +9,7 @@
 
 - [x] 1장: `$5 x 2 = $10`
 - [x] 2장: Dollar 부작용
-- [ ] 3장: `equals()`
+- [x] 3장: `equals()`
+- [x] 4장: amount를 private 하게 만들기
 - [ ] Equal null
 - [ ] Equal object
