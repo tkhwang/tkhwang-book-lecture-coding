@@ -51,6 +51,7 @@ coding with reading books and studying lectures 🚀
 
 ## 🔎 Testing
 
+- [ ] [(book) 테스트 주도 개발](./framework/js-ts/testing/book-test-driven-development-by-example/README.md)
 - ✅ (book) [단위 테스트 - 생산성과 품질을 위한 단위 테스트 원칙과 패턴](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=280870631) 👍
 
 ## 🏠 Framework
