@@ -10,3 +10,5 @@
 - [x] 1장: `$5 x 2 = $10`
 - [x] 2장: Dollar 부작용
 - [ ] 3장: `equals()`
+- [ ] Equal null
+- [ ] Equal object
