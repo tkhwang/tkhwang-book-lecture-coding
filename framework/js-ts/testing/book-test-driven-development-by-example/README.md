@@ -4,3 +4,8 @@
 [테스트 주도 개발](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=37469717)
 
 책을 보면서 typescript - jest 로 실제로 구현하기.
+
+## 제1부: 화폐 예제
+
+- [x] 1장: `$5 x 2 = $10`
+- [x] 2장: Dollar 부작용
