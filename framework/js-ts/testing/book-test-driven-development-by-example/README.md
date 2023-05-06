@@ -11,5 +11,6 @@
 - [x] 2장: Dollar 부작용
 - [x] 3장: `equals()`
 - [x] 4장: amount를 private 하게 만들기
+- [x] 5장: `5CHF x 2 = 10CHF`
 - [ ] Equal null
 - [ ] Equal object
