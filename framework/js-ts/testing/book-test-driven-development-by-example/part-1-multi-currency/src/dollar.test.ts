@@ -17,4 +17,9 @@ describe("dollar class", () => {
       new Dollar(5).equals(5);
     }).toThrowError(Error);
   });
+
+  it("Equality test", () => {
+    expect(new Dollar(5).equals(new Dollar(5))).toBe(true);
+    expect(new Dollar(5).equals(new Dollar(6))).toBe(false);
+  });
 });
