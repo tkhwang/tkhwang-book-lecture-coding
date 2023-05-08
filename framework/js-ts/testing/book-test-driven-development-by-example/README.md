@@ -13,5 +13,6 @@
 - [x] 4장: amount를 private 하게 만들기
 - [x] 5장: `5CHF x 2 = 10CHF`
 - [x] 6장: 공용 `equals()`
+- [x] 7장: French와 Dollar 비교하기
 - [ ] Equal null
 - [ ] Equal object
