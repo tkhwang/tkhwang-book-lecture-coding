@@ -1,3 +1,4 @@
+import { Dollar } from "./dollar";
 import { Franc } from "./franc";
 
 describe("franc class", () => {
@@ -11,5 +12,8 @@ describe("franc class", () => {
   it("Equality test", () => {
     expect(new Franc(5).equals(new Franc(5))).toBe(true);
     expect(new Franc(5).equals(new Franc(6))).toBe(false);
+    expect(() => {
+      new Dollar(5).equals(new Franc(5));
+    }).toThrowError(Error);
   });
 });
