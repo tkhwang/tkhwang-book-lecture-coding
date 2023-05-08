@@ -1,4 +1,5 @@
 import { Dollar } from "./dollar";
+import { Franc } from "./franc";
 
 describe("dollar class", () => {
   it("multiply() should work correctly.", () => {
@@ -21,5 +22,8 @@ describe("dollar class", () => {
   it("Equality test", () => {
     expect(new Dollar(5).equals(new Dollar(5))).toBe(true);
     expect(new Dollar(5).equals(new Dollar(6))).toBe(false);
+    expect(() => {
+      new Dollar(5).equals(new Franc(5));
+    }).toThrowError(Error);
   });
 });
