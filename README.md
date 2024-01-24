@@ -35,9 +35,16 @@ coding with reading books and studying lectures 🚀
 - ✅ (book) [clean code](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=34083680&start=slayer)
 - ✅ (book) [clean architecture](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=202322454&start=slayer)
 
-### 📦 DDD (domain driven design)
+## 🪚 Refactoring
 
-- [x] ✅ (book) [도메인 주도 설계 철저 입문](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=252622256)
+- [ ] [(book) Refactoring 2nd edition](./language/js/book-martin-fowler-refactoring-2nd/)
+  - 역시 유명한 명서는 꼭 읽어봐야할 것 같다.
+- [ ] [(book) 파이브 라인스 오브 코드 (five lines of Code)](./language/ts/book-five-lines-of-code/)
+
+## 🔎 Testing
+
+- [ ] [(book) 테스트 주도 개발](./framework/js-ts/testing/book-test-driven-development-by-example/README.md)
+- ✅ (book) [단위 테스트 - 생산성과 품질을 위한 단위 테스트 원칙과 패턴](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=280870631) 👍
 
 ## 🥑 Algorithms and data-structures
 
@@ -45,14 +52,9 @@ coding with reading books and studying lectures 🚀
 - ✅ (book) [문제 해결력을 높이는 알고리즘과 자료 구조](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=289274245)
 - [ ] [(book) the recursive book of recursion](./algorithms/book-the-recursive-book-of-recursion/)
 
-## 🪚 Refactoring
+### 📦 DDD (domain driven design)
 
-- [ ] [(book) 파이브 라인스 오브 코드 (five lines of Code)](./language/ts/book-five-lines-of-code/)
-
-## 🔎 Testing
-
-- [ ] [(book) 테스트 주도 개발](./framework/js-ts/testing/book-test-driven-development-by-example/README.md)
-- ✅ (book) [단위 테스트 - 생산성과 품질을 위한 단위 테스트 원칙과 패턴](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=280870631) 👍
+- [x] ✅ (book) [도메인 주도 설계 철저 입문](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=252622256)
 
 ## 🏠 Framework
 
