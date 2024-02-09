@@ -5,6 +5,7 @@ describe("TDD", () => {
   test("myStack을 테스트할 수 있다", () => {
     const stack = new MyStack()
 
-    expect(stack.isEmpty()).toBe(true)
+    stack.push(0)
+    expect(stack.isEmpty()).toBe(false)
   })
 })

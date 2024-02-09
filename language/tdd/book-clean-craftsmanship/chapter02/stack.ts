@@ -1,5 +1,6 @@
 export class MyStack {
   isEmpty(): boolean {
-    return true
+    return false
   }
+  push(item: number): void {}
 }
