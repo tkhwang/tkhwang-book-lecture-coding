@@ -8,7 +8,7 @@ describe("MyStack은", () => {
     expect(stack.isEmpty()).toBe(true)
   })
 
-  test("push 할 수 있다", () => {
+  test("0 push한 이후에는 stack은 empty가 아니다", () => {
     stack.push(0)
     expect(stack.isEmpty()).toBe(false)
   })
