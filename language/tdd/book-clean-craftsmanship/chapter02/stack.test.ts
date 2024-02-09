@@ -1,5 +1,8 @@
+import { assert, describe, expect, test } from "vitest"
+import { MyStack } from "./stack"
+
 describe("TDD", () => {
-  it("myStack을 테스트할 수 있다", () => {
+  test("myStack을 테스트할 수 있다", () => {
     const stack = new MyStack()
   })
 })
