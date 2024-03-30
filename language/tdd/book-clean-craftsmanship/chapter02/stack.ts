@@ -7,4 +7,13 @@ export class MyStack {
   push(item: number) {
     this.empty = false
   }
+
+  pop(): number | undefined {
+    this.empty = true
+    return -1
+  }
+
+  get size(): number {
+    return 2
+  }
 }
