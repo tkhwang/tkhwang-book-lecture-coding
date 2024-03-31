@@ -41,11 +41,6 @@ coding with reading books and studying lectures 🚀
   - 역시 유명한 명서는 꼭 읽어봐야할 것 같다.
 - [ ] [(book) 파이브 라인스 오브 코드 (five lines of Code)](./language/ts/book-five-lines-of-code/)
 
-## 🔎 Testing
-
-- [ ] [(book) 테스트 주도 개발](./framework/js-ts/testing/book-test-driven-development-by-example/README.md)
-- ✅ (book) [단위 테스트 - 생산성과 품질을 위한 단위 테스트 원칙과 패턴](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=280870631) 👍
-
 ## 🥑 Algorithms and data-structures
 
 - ✅ (book) [코딩 인터뷰를 위한 알고리즘 치트시트](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=301923855) 👍
@@ -80,6 +75,12 @@ coding with reading books and studying lectures 🚀
 ### socket programming
 
 - [ ] [(lecture) socket: nomad-zoom-clone-coding](./framework/js-ts/node.js/nomad-zoom-clone-coding/)
+
+## 🔎 Testing
+
+- ✅ (book) [단위 테스트 - 생산성과 품질을 위한 단위 테스트 원칙과 패턴](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=280870631) 👍
+- [ ] [(book) 테스트 주도 개발](./framework/js-ts/testing/book-test-driven-development-by-example/README.md)
+- [ ][(lecture) The Complete React Testing Course](./framework/js-ts/react.js/mosh-react-testing/README.md)
 
 ## 🏦 SQL
 
