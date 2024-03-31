@@ -12,17 +12,6 @@ coding with reading books and studying lectures 🚀
     - 학습 쇼핑(?)이 아니라 실제 프로젝트를 진행 (70%) 하면서 필요한 내용을 학습 (30%) 하기
     - 클린한 작은 코드의 위대함. 20-80법칙. MVP 의미. 집중.
 
-## 💌 Language
-
-### javascript
-
-- ✅ (book) [자바스크립트 코딩의 기술](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=222197779&start=slayer) 👍
-- [ ] [(book) 자바스크립트로 배우는 SICP - 컴퓨터 프로그램의 구조와 해석](./language/js/book-structure-interpretation-of-computer-programs-javascript-edition/)
-
-### typescript
-
-- ✅ (book)[TypeScript in 50 Lessons](https://typescript-book.com/)
-
 ## 🏛️ Design & Architectures
 
 - ✅ (book) [오브젝트](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=193681076) 👍
@@ -45,6 +34,17 @@ coding with reading books and studying lectures 🚀
 ## 📦 DDD (domain driven design)
 
 - [x] ✅ (book) [도메인 주도 설계 철저 입문](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=252622256)
+
+## 💌 Language
+
+### javascript
+
+- ✅ (book) [자바스크립트 코딩의 기술](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=222197779&start=slayer) 👍
+- [ ] [(book) 자바스크립트로 배우는 SICP - 컴퓨터 프로그램의 구조와 해석](./language/js/book-structure-interpretation-of-computer-programs-javascript-edition/)
+
+### typescript
+
+- ✅ (book)[TypeScript in 50 Lessons](https://typescript-book.com/)
 
 ## 🏠 Framework
 
