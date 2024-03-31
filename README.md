@@ -29,6 +29,7 @@ coding with reading books and studying lectures 🚀
 - ✅ (book) [엘레강트 오브젝트](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=258374007)
 - ✅ (book) [만들면서 배우는 클린 아키텍쳐](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=283437942) 👍
 - ✅ (book) [오브젝트 디자인 스타일 가이드](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=246083162)
+- ✅ (book) [내 코드가 그렇게 이상한가요?](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317906454) 👍
 
 ### 🏥 clean series
 
@@ -41,13 +42,7 @@ coding with reading books and studying lectures 🚀
   - 역시 유명한 명서는 꼭 읽어봐야할 것 같다.
 - [ ] [(book) 파이브 라인스 오브 코드 (five lines of Code)](./language/ts/book-five-lines-of-code/)
 
-## 🥑 Algorithms and data-structures
-
-- ✅ (book) [코딩 인터뷰를 위한 알고리즘 치트시트](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=301923855) 👍
-- ✅ (book) [문제 해결력을 높이는 알고리즘과 자료 구조](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=289274245)
-- [ ] [(book) the recursive book of recursion](./algorithms/book-the-recursive-book-of-recursion/)
-
-### 📦 DDD (domain driven design)
+## 📦 DDD (domain driven design)
 
 - [x] ✅ (book) [도메인 주도 설계 철저 입문](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=252622256)
 
@@ -80,7 +75,13 @@ coding with reading books and studying lectures 🚀
 
 - ✅ (book) [단위 테스트 - 생산성과 품질을 위한 단위 테스트 원칙과 패턴](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=280870631) 👍
 - [ ] [(book) 테스트 주도 개발](./framework/js-ts/testing/book-test-driven-development-by-example/README.md)
-- [ ][(lecture) The Complete React Testing Course](./framework/js-ts/react.js/mosh-react-testing/README.md)
+- [ ] [(lecture) The Complete React Testing Course](./framework/js-ts/react.js/mosh-react-testing/README.md)
+
+## 🥑 Algorithms and data-structures
+
+- ✅ (book) [코딩 인터뷰를 위한 알고리즘 치트시트](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=301923855) 👍
+- ✅ (book) [문제 해결력을 높이는 알고리즘과 자료 구조](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=289274245)
+- [ ] [(book) the recursive book of recursion](./algorithms/book-the-recursive-book-of-recursion/)
 
 ## 🏦 SQL
 
