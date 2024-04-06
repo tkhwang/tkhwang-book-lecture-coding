@@ -1,0 +1,197 @@
+[data-stack] {
+  --gutter: initial;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter, 0);
+}
+
+[data-inline-cluster] {
+  --gutter: initial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gutter, 0px);
+  align-items: center;
+}
+
+[data-inline-cluster~="justify:center"] {
+  justify-content: center;
+}
+[data-inline-cluster~="justify:start"] {
+  justify-content: flex-start;
+}
+[data-inline-cluster~="justify:end"] {
+  justify-content: flex-end;
+}
+[data-inline-cluster~="justify:space-between"] {
+  justify-content: space-between;
+}
+
+[data-inline-cluster~="align:start"] {
+  align-items: flex-start;
+}
+[data-inline-cluster~="align:center"] {
+  align-items: center;
+}
+[data-inline-cluster~="align:end"] {
+  align-items: flex-end;
+}
+[data-inline-cluster~="align:stretch"] {
+  align-items: stretch;
+}
+
+[data-split] {
+  --switchAt: initial;
+  --gutter: initial;
+  --minItemWidth: initial;
+  --largestWidth: calc(100% - max(0px, var(--gutter, 0px)));
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter, 0);
+}
+
+[data-split] > * {
+  flex-grow: 1;
+}
+
+[data-split] > *:nth-child(1) {
+  flex-basis: max(var(--minItemWidth, 0px), calc(var(--largestWidth) * 0.5));
+}
+
+[data-split] > *:nth-child(2) {
+  flex-basis: calc(
+    (max(var(--switchAt, 0px), var(--largestWidth)) - var(--largestWidth)) * 999
+  );
+  min-inline-size: max(
+    min(var(--minItemWidth, 0), 100%),
+    calc(var(--largestWidth) * 0.5)
+  );
+  flex-grow: 999;
+}
+
+[data-split] > :nth-child(n + 2) ~ * {
+  flex-basis: 100%;
+}
+
+/* All the Fraction options */
+[data-split~="fraction:1/4"] > *:nth-child(1) {
+  flex-basis: max(var(--minItemWidth, 0px), calc(var(--largestWidth) * 0.25));
+}
+
+[data-split~="fraction:1/3"] > *:nth-child(1) {
+  flex-basis: max(
+    var(--minItemWidth, 0px),
+    calc(var(--largestWidth) * 0.333333)
+  );
+}
+
+[data-split~="fraction:1/2"] > *:nth-child(1) {
+  flex-basis: max(var(--minItemWidth, 0px), calc(var(--largestWidth) * 0.5));
+}
+
+[data-split~="fraction:2/3"] > *:nth-child(2) {
+  flex-basis: max(
+    var(--minItemWidth, 0px),
+    calc(var(--largestWidth) * 0.333333)
+  );
+}
+
+[data-split~="fraction:3/4"] > *:nth-child(2) {
+  flex-basis: max(var(--minItemWidth, 0px), calc(var(--largestWidth) * 0.25));
+}
+
+:is(
+    [data-split~="fraction:1/4"],
+    [data-split~="fraction:1/3"],
+    [data-split~="fraction:1/2"],
+
+  )
+  > *:nth-child(2) {
+  flex-basis: calc(
+    (max(var(--switchAt, 0px), var(--largestWidth)) - var(--largestWidth)) * 999
+  );
+  min-inline-size: max(
+    min(var(--minItemWidth, 0), 100%),
+    calc(var(--largestWidth) * 0.5)
+  );
+  flex-grow: 999;
+}
+
+:is([data-split~="fraction:3/4"], [data-split~="fraction:2/3"], )
+  > *:nth-child(1) {
+  flex-basis: calc(
+    (var(--switchAt, var(--largestWidth)) - var(--largestWidth)) * 999
+  );
+  min-inline-size: max(
+    min(var(--minItemWidth, 0), 100%),
+    calc(50% - var(--gutter))
+  );
+  flex-grow: 999;
+}
+
+[data-cover] {
+  --gutter: initial;
+  --minHeight: intial;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter, 0px);
+
+  min-block-size: var(--minHeight, 100%);
+}
+
+[data-cover] > [data-cover-centered] {
+  margin-block-start: auto;
+  margin-block-end: auto;
+}
+
+[data-center] {
+  box-sizing: content-box;
+  max-inline-size: var(--maxWidth, 100%);
+}
+
+[data-center][data-center] {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-inline: auto;
+}
+
+[data-center~="center-children"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+[data-center~="center-text"] {
+  text-align: center;
+}
+
+[data-column-drop] {
+  --gutter: initial;
+  --minItemWidth: initial;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gutter, 0px);
+}
+
+[data-column-drop] > * {
+  margin: 0;
+  flex-basis: var(--minItemWidth, 0px);
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+[data-column-drop~="no-stretched-columns"] > * {
+  flex-grow: 0;
+}
+
+[data-grid] {
+  --gutter: initial;
+  --minItemWidth: initial;
+  display: grid;
+  gap: var(--gutter, 0px);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--minItemWidth, 0px), 100%), 1fr)
+  );
+}
