@@ -258,3 +258,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# contents
+styling/lecture-newline-mastering-css-layout/src/css/module_2
+styling/lecture-newline-mastering-css-layout/src/css/module_3

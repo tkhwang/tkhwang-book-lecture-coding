@@ -1,0 +1,178 @@
+@import url("https://fonts.cdnfonts.com/css/advent-pro");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+ul[class],
+ol[class],
+ul[role="list"],
+ol[role="list"] {
+  padding: 0;
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-block-size: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  display: block;
+  max-inline-size: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+figcaption {
+  max-inline-size: 60ch;
+  overflow-wrap: break-word;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  max-inline-size: 100%;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-3);
+}
+
+h2 {
+  font-size: var(--font-size-fluid-2);
+  font-weight: var(--font-weight-7);
+  line-height: var(--line-height-2);
+}
+
+.logo {
+  font-family: "Advent Pro", sans-serif;
+  font-size: var(--font-size-fluid-3);
+}
+
+.header {
+  padding: var(--size-5) var(--size-fluid-3);
+}
+
+.button {
+  padding: var(--size-3) var(--size-6);
+  border-radius: var(--radius-round);
+  border: 0;
+  background-color: var(--yellow-3);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-7);
+}
+
+.hero-section {
+  padding-block-end: var(--size-7);
+}
+
+.hero-cta {
+  padding-inline: var(--size-10);
+}
+
+.hero-heading {
+  font-size: var(--font-size-fluid-3);
+  font-weight: var(--font-weight-7);
+  line-height: var(--line-height-2);
+}
+
+.testimonial-section {
+  padding: var(--size-10);
+  background-color: var(--blue-1);
+}
+
+.testimonial-detail-section {
+  padding-inline: var(--size-5);
+  padding-block-end: var(--size-10);
+}
+
+.testimonial-detail-section-heading {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-1);
+  text-transform: uppercase;
+}
+
+.testimonial > p::before {
+  content: "“";
+}
+
+.testimonial > p::after {
+  content: "”";
+}
+
+.testimonial-detail-list {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-8);
+}
+
+.streamline-section {
+  padding: var(--size-10) var(--size-5);
+}
+
+.get-started-section {
+  padding: var(--size-10);
+  background-color: var(--yellow-1);
+}
+
+.footer {
+  padding: var(--size-10);
+  background-color: var(--gray-9);
+  color: var(--gray-1);
+}
+
+.footer-heading {
+  font-size: var(--font-size-fluid-1);
+}
+
+.footer-terms-links > a {
+  color: var(--gray-5);
+  text-decoration: none;
+}

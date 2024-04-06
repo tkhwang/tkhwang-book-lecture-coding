@@ -1,0 +1,111 @@
+[data-stack] {
+  --gutter: initial;
+  display: grid;
+  gap: var(--gutter, 0px);
+  align-content: start;
+}
+
+[data-inline-cluster] {
+  --gutter: initial;
+  gap: var(--gutter, 0px);
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+}
+
+[data-inline-cluster~="justify:center"] {
+  justify-content: center;
+}
+
+[data-inline-cluster~="justify:start"] {
+  justify-content: flex-start;
+}
+
+[data-inline-cluster~="justify:end"] {
+  justify-content: flex-end;
+}
+[data-inline-cluster~="justify:space-between"] {
+  justify-content: space-between;
+}
+
+[data-inline-cluster~="align:start"] {
+  align-items: flex-start;
+}
+[data-inline-cluster~="align:center"] {
+  align-items: center;
+}
+[data-inline-cluster~="align:end"] {
+  align-items: flex-end;
+}
+[data-inline-cluster~="align:stretch"] {
+  align-items: stretch;
+}
+
+[data-split] {
+  --gutter: initial;
+  display: grid;
+  gap: var(--gutter, 0px);
+  grid-template-columns: 1fr 1fr;
+}
+
+[data-split~="fraction:1/4"] {
+  grid-template-columns: 1fr 3fr;
+}
+
+[data-split~="fraction:1/3"] {
+  grid-template-columns: 1fr 2fr;
+}
+
+[data-split~="fraction:1/2"] {
+  grid-template-columns: 1fr 1fr;
+}
+
+[data-split~="fraction:2/3"] {
+  grid-template-columns: 2fr 1fr;
+}
+
+[data-split~="fraction:3/4"] {
+  grid-template-columns: 3fr 1fr;
+}
+
+[data-cover] {
+  --gutter: initial;
+  --minHeight: initial;
+
+  display: grid;
+  gap: var(--gutter, 0px);
+  align-items: start;
+
+  min-block-size: var(--minHeight, 100%);
+}
+
+[data-cover] > [data-cover-centered] {
+  align-self: center;
+}
+
+[data-center][data-center] {
+  max-inline-size: var(--maxWidth, 100%);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+[data-center~="center-children"] {
+  display: grid;
+  justify-items: center;
+}
+
+[data-center~="center-text"] {
+  text-align: center;
+}
+
+[data-grid] {
+  --gutter: initial;
+  --minItemWidth: initial;
+  display: grid;
+  gap: var(--gutter, 0px);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--minItemWidth, 0px), 100%), 1fr)
+  );
+}
