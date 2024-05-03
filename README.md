@@ -4,13 +4,15 @@ coding with reading books and studying lectures 🚀
 
 ## 💻 General
 
-- ✅ (book) [프로그래머의 뇌](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=285967039)
-- ✅ (book) [좋은 코드, 나쁜 코드](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=294649282&start=slayer)
+- ✅ (book) [캔트 백의 Tidy First ?](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337084402) 👍
+  - 24.04.21 : 코드 정리의 유용성을 경제학 개념을 비유로 설명함.
 - ✅ (book) [클린 코드의 기술](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=308919612&start=slayer) 👍
   - 23/01/28
     - 개발서를 가장(?)한 자기 계발서.
     - 학습 쇼핑(?)이 아니라 실제 프로젝트를 진행 (70%) 하면서 필요한 내용을 학습 (30%) 하기
     - 클린한 작은 코드의 위대함. 20-80법칙. MVP 의미. 집중.
+- ✅ (book) [좋은 코드, 나쁜 코드](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=294649282&start=slayer)
+- ✅ (book) [프로그래머의 뇌](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=285967039)
 
 ## 🏛️ Design & Architectures
 
