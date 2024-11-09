@@ -1,8 +1,20 @@
 import fs from "fs"
 
-const srcDir = process.argv[2]
-const results = fs.readdir(srcDir)
+const listContents = (err, files) => {
+  console.log("running callback")
 
-for (const name of results) {
-  console.log(name)
+  if (err) {
+    console.error(err)
+    return
+  }
+
+  for (const name of files) {
+    console.log(name)
+  }
 }
+
+const srcDir = process.argv[2]
+
+const results = fs.readdir(srcDir, listContents)
+
+console.log("last line of program")
