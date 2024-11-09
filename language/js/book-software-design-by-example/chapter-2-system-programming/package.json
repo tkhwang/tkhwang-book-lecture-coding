@@ -1,0 +1,13 @@
+{
+  "name": "chapter-2-system-programming",
+  "version": "1.0.0",
+  "main": "list-folder.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
