@@ -22,6 +22,7 @@ export default function IndexScreen() {
           if (request.url?.startsWith('https://')) {
             router.navigate({
               pathname: 'browser',
+              params: { initialUrl: request.url },
             });
             return false;
           }
