@@ -1,7 +1,10 @@
-import { Text } from 'react-native';
+import { View } from 'react-native';
+import { WebView } from 'react-native-webview';
 
-function HomeScreen() {
-  return <Text>Home</Text>;
+export default function IndexScreen() {
+  return (
+    <View style={{ flex: 1 }}>
+      <WebView source={{ uri: 'https://www.naver.com/' }} style={{ flex: 1 }} />
+    </View>
+  );
 }
-
-export default HomeScreen;
