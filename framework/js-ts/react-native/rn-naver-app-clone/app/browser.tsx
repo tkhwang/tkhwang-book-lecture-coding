@@ -57,7 +57,6 @@ function BrowserScreen() {
         source={{ uri: initialUrl }}
         style={{ flex: 1 }}
         onNavigationStateChange={event => {
-          console.log('TCL: BrowserScreen -> event', event);
           setUrl(event.url);
           setCanGoBack(event.canGoBack);
           setCanGoForward(event.canGoForward);
