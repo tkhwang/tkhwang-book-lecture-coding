@@ -1,22 +1,10 @@
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import { useRouter } from 'expo-router';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { View } from 'react-native';
+import { WebView } from 'react-native-webview';
 
 function ShoppingScreen() {
-  const router = useRouter();
-
   return (
-    <View>
-      <Text>Shopping</Text>
-      <TouchableOpacity
-        onPress={() => {
-          router.navigate('browser');
-        }}
-      >
-        <Text>Go to Browser</Text>
-      </TouchableOpacity>
-      <MaterialCommunityIcons name="shopping" size={24} color="black" />
-      <MaterialCommunityIcons name="home" size={24} color="black" />
+    <View style={{ flex: 1 }}>
+      <WebView source={{ uri: 'https://shopping.naver.com/ns/home' }} style={{ flex: 1 }} />
     </View>
   );
 }
