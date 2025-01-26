@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['universe', 'universe/shared/typescript-analysis'],
+  extends: ['universe', 'universe/shared/typescript-analysis', 'prettier'],
   overrides: [
     {
       files: ['*.ts', '*.tsx', '*.d.ts'],
