@@ -1,8 +1,14 @@
-// https://docs.expo.dev/guides/using-eslint/
 module.exports = {
-  extends: ["expo", "prettier"],
-  plugins: ["prettier"],
+  extends: ['universe', 'universe/shared/typescript-analysis'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx', '*.d.ts'],
+      parserOptions: {
+        project: './tsconfig.json',
+      },
+    },
+  ],
   rules: {
-    "prettier/prettier": "error",
+    'prettier/prettier': 'error',
   },
 };
