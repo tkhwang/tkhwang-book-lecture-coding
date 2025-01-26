@@ -16,6 +16,7 @@ function ShoppingScreen() {
         <Text>Go to Browser</Text>
       </TouchableOpacity>
       <MaterialCommunityIcons name="shopping" size={24} color="black" />
+      <MaterialCommunityIcons name="home" size={24} color="black" />
     </View>
   );
 }
