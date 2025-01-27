@@ -1,19 +1,40 @@
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { Tabs } from 'expo-router';
 
+function HomeIcon({ focused, color }: { focused: boolean; color: string }) {
+  const iconName = focused ? 'home' : 'home-outline';
+  return <MaterialCommunityIcons name={iconName} size={26} color={color} />;
+}
+
+function ShoppingIcon({ focused, color }: { focused: boolean; color: string }) {
+  const iconName = focused ? 'shopping' : 'shopping-outline';
+  return <MaterialCommunityIcons name={iconName} size={26} color={color} />;
+}
+
 export default function TabLayout() {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarStyle: {
+          backgroundColor: 'black',
+        },
+        tabBarActiveTintColor: 'white',
+        // tabBarInactiveTintColor: 'white',
+        headerShown: false,
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="home" size={size} color={color} />,
+          tabBarLabel: 'Home',
+          tabBarIcon: HomeIcon,
         }}
       />
       <Tabs.Screen
         name="shopping"
         options={{
-          tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="cart" size={size} color={color} />,
+          tabBarLabel: 'Shopping',
+          tabBarIcon: ShoppingIcon,
         }}
       />
     </Tabs>
