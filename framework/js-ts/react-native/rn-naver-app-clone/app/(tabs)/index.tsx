@@ -11,7 +11,7 @@ export default function IndexScreen() {
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
         onShouldStartLoadWithRequest={request => {
-          console.log(request);
+          // console.log(request);
           if (
             request.url.startsWith('https://m.naver.com') ||
             request.mainDocumentURL?.startsWith('https://m.naver.com')
