@@ -1,8 +1,10 @@
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { router, useLocalSearchParams } from 'expo-router';
-import { useMemo, useRef, useState } from 'react';
+import { useContext, useMemo, useRef, useState } from 'react';
 import { Animated, Platform, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import WebView from 'react-native-webview';
+
+import { WebViewContext } from '@/providers/WebViewProvider';
 
 function NavButton({
   iconName,
@@ -24,7 +26,9 @@ function BrowserScreen() {
   const params = useLocalSearchParams();
   const initialUrl = params.initialUrl as string;
 
-  const webViewRef = useRef<WebView>(null);
+  const webViewRef = useRef<WebView | null>(null);
+
+  const context = useContext(WebViewContext);
 
   const [url, setUrl] = useState(initialUrl);
   const urlTitle = useMemo(() => url.replace('https://', '').split('/')[0], [url]);
@@ -53,7 +57,13 @@ function BrowserScreen() {
         />
       </View>
       <WebView
-        ref={webViewRef}
+        // ref={webViewRef}
+        ref={ref => {
+          webViewRef.current = ref;
+          if (ref) {
+            context?.addWebView(ref);
+          }
+        }}
         source={{ uri: initialUrl }}
         style={{ flex: 1 }}
         onNavigationStateChange={event => {
