@@ -3,10 +3,13 @@ import { useContext } from 'react';
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 
+import { useLogin } from '@/hooks/useLogin';
 import { WebViewContext } from '@/providers/WebViewProvider';
 
 export default function IndexScreen() {
   const context = useContext(WebViewContext);
+
+  const { loadLoggedIn, onMessage } = useLogin();
 
   return (
     <SafeAreaView style={styles.safearea}>
@@ -38,6 +41,10 @@ export default function IndexScreen() {
 
           return true;
         }}
+        onLoadEnd={() => {
+          loadLoggedIn();
+        }}
+        onMessage={onMessage}
       />
     </SafeAreaView>
   );
