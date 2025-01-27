@@ -38,6 +38,13 @@ function BrowserScreen() {
   const [canGoBack, setCanGoBack] = useState(false);
   const [canGoForward, setCanGoForward] = useState(false);
 
+  const DISABLE_PINCH_ZOOM = `(function() {
+    const meta = document.createElement('meta');
+    meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+    meta.setAttribute('name', 'viewport');
+    document.getElementsByTagName('head')[0].appendChild(meta);
+  })();`;
+
   return (
     <SafeAreaView style={styles.safearea}>
       <View style={styles.urlContainer}>
@@ -77,6 +84,8 @@ function BrowserScreen() {
         onLoadEnd={() => {
           progressAnim.setValue(0);
         }}
+        injectedJavaScript={DISABLE_PINCH_ZOOM}
+        onMessage={() => {}}
       />
       <View style={styles.navigator}>
         <TouchableOpacity
