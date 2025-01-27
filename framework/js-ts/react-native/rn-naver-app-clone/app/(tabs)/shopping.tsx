@@ -56,7 +56,7 @@ function ShoppingScreen() {
             return true;
           }}
           renderLoading={() => <></>}
-          startInLoadingState={true}
+          startInLoadingState
         />
       </ScrollView>
     </SafeAreaView>
