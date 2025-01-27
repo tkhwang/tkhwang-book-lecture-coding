@@ -1,11 +1,21 @@
 import { router } from 'expo-router';
+import { useContext } from 'react';
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 
+import { WebViewContext } from '@/providers/WebViewProvider';
+
 export default function IndexScreen() {
+  const context = useContext(WebViewContext);
+
   return (
     <SafeAreaView style={styles.safearea}>
       <WebView
+        ref={ref => {
+          if (ref) {
+            context?.addWebView(ref);
+          }
+        }}
         source={{ uri: 'https://m.naver.com/' }}
         style={{ flex: 1 }}
         showsVerticalScrollIndicator={false}
