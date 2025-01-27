@@ -38,11 +38,16 @@ function BrowserScreen() {
   const [canGoBack, setCanGoBack] = useState(false);
   const [canGoForward, setCanGoForward] = useState(false);
 
-  const DISABLE_PINCH_ZOOM = `(function() {
+  const SCRIPT_FOR_ENHANCING_WEBVIEW = `(function() {
+    // disable pinch zoom
     const meta = document.createElement('meta');
     meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
     meta.setAttribute('name', 'viewport');
     document.getElementsByTagName('head')[0].appendChild(meta);
+
+    // disable user selection
+    document.body.style['user-select'] = 'none';
+    document.body.style['-webkit-user-select'] = 'none';
   })();`;
 
   return (
@@ -84,7 +89,7 @@ function BrowserScreen() {
         onLoadEnd={() => {
           progressAnim.setValue(0);
         }}
-        injectedJavaScript={DISABLE_PINCH_ZOOM}
+        injectedJavaScript={SCRIPT_FOR_ENHANCING_WEBVIEW}
         onMessage={() => {}}
         allowsLinkPreview={false}
       />
