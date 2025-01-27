@@ -24,6 +24,7 @@ function NavButton({
 
 function BrowserScreen() {
   const params = useLocalSearchParams();
+
   const initialUrl = params.initialUrl as string;
 
   const webViewRef = useRef<WebView | null>(null);
