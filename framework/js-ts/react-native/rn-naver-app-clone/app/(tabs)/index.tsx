@@ -1,5 +1,6 @@
+import { useBackHandler } from '@react-native-community/hooks';
 import { router } from 'expo-router';
-import { useContext } from 'react';
+import { useContext, useRef, useState } from 'react';
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 
@@ -7,9 +8,20 @@ import { useLogin } from '@/hooks/useLogin';
 import { WebViewContext } from '@/providers/WebViewProvider';
 
 export default function IndexScreen() {
+  const webViewRef = useRef<WebView | null>(null);
   const context = useContext(WebViewContext);
 
   const { loadLoggedIn, onMessage } = useLogin();
+
+  const [canGoBack, setCanGoBack] = useState(false);
+
+  useBackHandler(() => {
+    if (canGoBack && webViewRef.current !== null) {
+      webViewRef.current?.goBack();
+      return true;
+    }
+    return false;
+  });
 
   return (
     <SafeAreaView style={styles.safearea}>
@@ -18,6 +30,7 @@ export default function IndexScreen() {
           if (ref) {
             context?.addWebView(ref);
           }
+          webViewRef.current = ref;
         }}
         source={{ uri: 'https://m.naver.com/' }}
         style={{ flex: 1 }}
@@ -45,6 +58,9 @@ export default function IndexScreen() {
           loadLoggedIn();
         }}
         onMessage={onMessage}
+        onNavigationStateChange={event => {
+          setCanGoBack(event.canGoBack);
+        }}
       />
     </SafeAreaView>
   );
