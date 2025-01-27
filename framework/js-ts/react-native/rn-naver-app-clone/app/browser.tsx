@@ -86,6 +86,7 @@ function BrowserScreen() {
         }}
         injectedJavaScript={DISABLE_PINCH_ZOOM}
         onMessage={() => {}}
+        allowsLinkPreview={false}
       />
       <View style={styles.navigator}>
         <TouchableOpacity
