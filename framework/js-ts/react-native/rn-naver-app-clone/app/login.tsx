@@ -14,8 +14,6 @@ function LoginScreen() {
       <WebView
         source={{ uri: LOGIN_URL }}
         onNavigationStateChange={event => {
-          console.log(`[+][LoginScreen]: event: ${event.url}`);
-
           if (event.url === 'https://www.naver.com') {
             if (context?.webViewRefs && context.webViewRefs.current.length > 0) {
               context.webViewRefs.current.forEach(webView => {
