@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['universe', 'universe/shared/typescript-analysis', 'prettier'],
+  extends: ['universe/native', 'universe/shared/typescript-analysis', 'prettier', 'plugin:react-hooks/recommended'],
   overrides: [
     {
       files: ['*.ts', '*.tsx', '*.d.ts'],
@@ -10,5 +10,7 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': 'error',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
 };
