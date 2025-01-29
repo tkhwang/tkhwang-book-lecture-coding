@@ -38,7 +38,10 @@ export default function App() {
     const html = `
       <!DOCTYPE html>
       <html>
-        <body>
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        </head>
+        <body style="margin: 0; padding: 0;">
           <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
           <div id="player"></div>
 
@@ -108,7 +111,11 @@ export default function App() {
           <Icon name="add-link" size={24} color="#AEAEB2" />
         </TouchableOpacity>
       </View>
-      <View style={styles.youtubeContainer}>{youtubeId.length > 0 && <WebView source={source} />}</View>
+      <View style={styles.youtubeContainer}>
+        {youtubeId.length > 0 && (
+          <WebView source={source} allowsInlineMediaPlayback mediaPlaybackRequiresUserAction={false} />
+        )}
+      </View>
     </SafeAreaView>
   );
 }
