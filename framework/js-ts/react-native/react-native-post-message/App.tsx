@@ -1,9 +1,24 @@
 import Icon from "@expo/vector-icons/MaterialIcons";
-import { useState } from "react";
-import { Platform, SafeAreaView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import queryString from "query-string";
+import { useCallback, useState } from "react";
+import { Alert, Platform, SafeAreaView, StatusBar, StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 
 export default function App() {
   const [url, setUrl] = useState("");
+  const [youtubeId, setYoutubeId] = useState("");
+
+  const onPressOpenLink = useCallback(() => {
+    console.log("TCL: onPressOpenLink:", url);
+    const {
+      query: { v: id },
+    } = queryString.parseUrl(url);
+
+    if (typeof id === "string") {
+      setYoutubeId(id);
+    } else {
+      Alert.alert("잘못된 URL입니다.");
+    }
+  }, [url]);
 
   return (
     <SafeAreaView style={styles.safearea}>
@@ -16,7 +31,7 @@ export default function App() {
           value={url}
           inputMode="url"
         />
-        <TouchableOpacity hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}>
+        <TouchableOpacity hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }} onPress={onPressOpenLink}>
           <Icon name="add-link" size={24} color="#AEAEB2" />
         </TouchableOpacity>
       </View>
