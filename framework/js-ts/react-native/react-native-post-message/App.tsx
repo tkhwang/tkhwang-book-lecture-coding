@@ -1,6 +1,6 @@
 import Icon from "@expo/vector-icons/MaterialIcons";
 import queryString from "query-string";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import {
   Alert,
   Dimensions,
@@ -18,8 +18,11 @@ const YT_WIDTH = Dimensions.get("window").width;
 const YT_HEIGHT = YT_WIDTH * (9 / 16);
 
 export default function App() {
+  const webViewRef = useRef<WebView | null>(null);
+
   const [url, setUrl] = useState("");
-  const [youtubeId, setYoutubeId] = useState("");
+  const [youtubeId, setYoutubeId] = useState("DsXtaEXpTnA");
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const onPressOpenLink = useCallback(() => {
     console.log("TCL: onPressOpenLink:", url);
@@ -75,13 +78,26 @@ export default function App() {
             }
 
             function onPlayerStateChange(event) {
+              window.ReactNativeWebView.postMessage(event.data);
             }
-          </script>
+         </script>
         </body>
       </html>    
     `;
     return { html };
   }, [youtubeId]);
+
+  const onPressPlay = useCallback(() => {
+    if (webViewRef.current !== null) {
+      webViewRef.current.injectJavaScript("player.playVideo();");
+    }
+  }, [webViewRef]);
+
+  const onPressPause = useCallback(() => {
+    if (webViewRef.current !== null) {
+      webViewRef.current.injectJavaScript("player.pauseVideo();");
+    }
+  }, [webViewRef]);
 
   return (
     <SafeAreaView style={styles.safearea}>
@@ -100,7 +116,27 @@ export default function App() {
       </View>
       <View style={styles.youtubeContainer}>
         {youtubeId.length > 0 && (
-          <WebView source={source} allowsInlineMediaPlayback mediaPlaybackRequiresUserAction={false} />
+          <WebView
+            ref={webViewRef}
+            source={source}
+            allowsInlineMediaPlayback
+            mediaPlaybackRequiresUserAction={false}
+            onMessage={(event) => {
+              console.log(event.nativeEvent.data);
+              setIsPlaying(event.nativeEvent.data === "1");
+            }}
+          />
+        )}
+      </View>
+      <View style={styles.controller}>
+        {isPlaying ? (
+          <TouchableOpacity style={styles.playButton}>
+            <Icon name="pause-circle" size={40} color="#00DDA8" onPress={onPressPause} />
+          </TouchableOpacity>
+        ) : (
+          <TouchableOpacity style={styles.playButton}>
+            <Icon name="play-circle" size={40} color="#00DDA8" onPress={onPressPlay} />
+          </TouchableOpacity>
         )}
       </View>
     </SafeAreaView>
@@ -134,4 +170,16 @@ const styles = StyleSheet.create({
     height: YT_HEIGHT,
     backgroundColor: "#4A4A4A",
   },
+  controller: {
+    backgroundColor: "#1A1A1A",
+    borderRadius: 10,
+    marginHorizontal: 16,
+    marginTop: 20,
+    paddingVertical: 12,
+    paddingHorizontal: 72,
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "row",
+  },
+  playButton: {},
 });
