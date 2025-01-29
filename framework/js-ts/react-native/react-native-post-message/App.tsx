@@ -1,6 +1,6 @@
 import Icon from "@expo/vector-icons/MaterialIcons";
 import queryString from "query-string";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Alert,
   Dimensions,
@@ -8,6 +8,7 @@ import {
   SafeAreaView,
   StatusBar,
   StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
   View,
@@ -17,12 +18,24 @@ import WebView from "react-native-webview";
 const YT_WIDTH = Dimensions.get("window").width;
 const YT_HEIGHT = YT_WIDTH * (9 / 16);
 
+function formatTime(time: number) {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+
+  const formattedMinutes = minutes.toString().padStart(2, "0");
+  const formattedSeconds = seconds.toString().padStart(2, "0");
+
+  return `${formattedMinutes}:${formattedSeconds}`;
+}
+
 export default function App() {
   const webViewRef = useRef<WebView | null>(null);
 
   const [url, setUrl] = useState("");
   const [youtubeId, setYoutubeId] = useState("DsXtaEXpTnA");
   const [isPlaying, setIsPlaying] = useState(false);
+  const [durationInSec, setDurationInSec] = useState(0);
+  const [currentTimeInSec, setCurrentTimeInSec] = useState(0);
 
   const onPressOpenLink = useCallback(() => {
     console.log("TCL: onPressOpenLink:", url);
@@ -74,11 +87,17 @@ export default function App() {
               });
             }
 
+            function postMessageToRN(type, data) {
+              const message = JSON.stringify({ type, data });
+              window.ReactNativeWebView.postMessage(message);
+            }
+
             function onPlayerReady(event) {
+              postMessageToRN("duration", player.getDuration());
             }
 
             function onPlayerStateChange(event) {
-              window.ReactNativeWebView.postMessage(event.data);
+              postMessageToRN("player-state", event.data);
             }
          </script>
         </body>
@@ -98,6 +117,25 @@ export default function App() {
       webViewRef.current.injectJavaScript("player.pauseVideo();");
     }
   }, [webViewRef]);
+
+  const durationText = useMemo(() => {
+    return `${formatTime(Math.floor(durationInSec))}`;
+  }, [durationInSec]);
+
+  const currentTimeText = useMemo(() => {
+    return `${formatTime(Math.floor(currentTimeInSec))}`;
+  }, [currentTimeInSec]);
+
+  useEffect(() => {
+    if (isPlaying) {
+      const interval = setInterval(() => {
+        if (webViewRef.current !== null) {
+          webViewRef.current.injectJavaScript(`postMessageToRN("current-time", player.getCurrentTime());`);
+        }
+      }, 50);
+      return () => clearInterval(interval);
+    }
+  }, [isPlaying]);
 
   return (
     <SafeAreaView style={styles.safearea}>
@@ -122,12 +160,21 @@ export default function App() {
             allowsInlineMediaPlayback
             mediaPlaybackRequiresUserAction={false}
             onMessage={(event) => {
-              console.log(event.nativeEvent.data);
-              setIsPlaying(event.nativeEvent.data === "1");
+              console.log(`[+][App|onMessage] data = ${event.nativeEvent.data}`);
+              const { type, data } = JSON.parse(event.nativeEvent.data);
+
+              if (type === "player-state") {
+                setIsPlaying(data === 1);
+              } else if (type === "duration") {
+                setDurationInSec(data);
+              } else if (type === "current-time") {
+                setCurrentTimeInSec(data);
+              }
             }}
           />
         )}
       </View>
+      <Text style={styles.timeText}>{`${currentTimeText} / ${durationText}`}</Text>
       <View style={styles.controller}>
         {isPlaying ? (
           <TouchableOpacity style={styles.playButton}>
@@ -181,5 +228,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     flexDirection: "row",
   },
-  playButton: {},
+  playButton: {
+    height: 50,
+    width: 50,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  timeText: {
+    color: "#AEAEB2",
+    alignSelf: "flex-end",
+    fontSize: 13,
+    marginTop: 15,
+    marginRight: 20,
+  },
 });
