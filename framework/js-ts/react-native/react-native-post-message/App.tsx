@@ -3,6 +3,7 @@ import queryString from "query-string";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Alert,
+  Animated,
   Dimensions,
   Platform,
   SafeAreaView,
@@ -30,6 +31,7 @@ function formatTime(time: number) {
 
 export default function App() {
   const webViewRef = useRef<WebView | null>(null);
+  const seekBarAnimRef = useRef(new Animated.Value(0));
 
   const [url, setUrl] = useState("");
   const [youtubeId, setYoutubeId] = useState("DsXtaEXpTnA");
@@ -137,6 +139,14 @@ export default function App() {
     }
   }, [isPlaying]);
 
+  useEffect(() => {
+    Animated.timing(seekBarAnimRef.current, {
+      toValue: currentTimeInSec,
+      duration: 50,
+      useNativeDriver: false,
+    }).start();
+  }, [currentTimeInSec]);
+
   return (
     <SafeAreaView style={styles.safearea}>
       <View style={styles.inputContainer}>
@@ -173,6 +183,30 @@ export default function App() {
             }}
           />
         )}
+      </View>
+      <View style={styles.seekBarBackground}>
+        <Animated.View
+          style={[
+            styles.seekBarProgress,
+            {
+              width: seekBarAnimRef.current.interpolate({
+                inputRange: [0, durationInSec],
+                outputRange: ["0%", "100%"],
+              }),
+            },
+          ]}
+        />
+        <Animated.View
+          style={[
+            styles.seekBarThumb,
+            {
+              left: seekBarAnimRef.current.interpolate({
+                inputRange: [0, durationInSec],
+                outputRange: ["0%", "100%"],
+              }),
+            },
+          ]}
+        />
       </View>
       <Text style={styles.timeText}>{`${currentTimeText} / ${durationText}`}</Text>
       <View style={styles.controller}>
@@ -240,5 +274,22 @@ const styles = StyleSheet.create({
     fontSize: 13,
     marginTop: 15,
     marginRight: 20,
+  },
+  seekBarBackground: {
+    backgroundColor: "#D4D4D4",
+    height: 3,
+  },
+  seekBarProgress: {
+    backgroundColor: "#00DDA8",
+    height: 3,
+    width: "0%",
+  },
+  seekBarThumb: {
+    backgroundColor: "#00DDA8",
+    height: 14,
+    width: 14,
+    borderRadius: 7,
+    position: "absolute",
+    top: (-14 + 3) / 2,
   },
 });
