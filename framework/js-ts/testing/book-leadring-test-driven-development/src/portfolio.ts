@@ -2,6 +2,10 @@ import { ICurrency, Money } from "./money";
 
 const EURO_TO_USD_RATE = 1.2;
 
+const exchangeRates = new Map<string, number>();
+exchangeRates.set("EUR->USD", 1.2);
+exchangeRates.set("USD->KRW", 1100);
+
 export class Portfolio {
   moneys: Money[] = [];
 
@@ -20,10 +24,13 @@ export class Portfolio {
   }
 
   convert(money: Money, currency: ICurrency) {
-    if (money.currency === currency) {
-      return money.amount;
-    }
+    if (money.currency === currency) return money.amount;
 
-    return money.amount * EURO_TO_USD_RATE;
+    const key = `${money.currency}->${currency}`;
+    const rate = exchangeRates.get(key);
+
+    if (!rate) throw new Error(key);
+
+    return money.amount * rate;
   }
 }

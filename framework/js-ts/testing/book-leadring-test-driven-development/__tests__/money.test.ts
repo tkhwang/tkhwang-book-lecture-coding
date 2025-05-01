@@ -35,7 +35,7 @@ describe("Money", () => {
 
   describe("multiple currencies", () => {
     describe("addition", () => {
-      it("should work.", () => {
+      it("addition of dollar and euro should work.", () => {
         const fiveDollars = new Money(5, "USD");
         const tenEuros = new Money(10, "EUR");
         const seventeenDollars = new Money(17, "USD");
@@ -44,6 +44,17 @@ describe("Money", () => {
         portfolio.add(fiveDollars, tenEuros);
 
         expect(portfolio.evaluate("USD")).toStrictEqual(seventeenDollars);
+      });
+
+      it("addition of dollar and won should work.", () => {
+        const oneDollar = new Money(1, "USD");
+        const krw1100 = new Money(1100, "KRW");
+        const krw2200 = new Money(2200, "KRW");
+
+        const portfolio = new Portfolio();
+        portfolio.add(oneDollar, krw1100);
+
+        expect(portfolio.evaluate("KRW")).toStrictEqual(krw2200);
       });
     });
   });
