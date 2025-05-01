@@ -1,3 +1,4 @@
+import { Bank } from "./bank";
 import { ICurrency, Money } from "./money";
 
 const EURO_TO_USD_RATE = 1.2;
@@ -15,18 +16,24 @@ export class Portfolio {
     this.moneys.push(...moneys);
   }
 
-  evaluate(currency: ICurrency) {
+  evaluate(bank: Bank, currency: ICurrency) {
     const failures: string[] = [];
     const total = this.moneys.reduce((sum, money) => {
-      const convertedAmount = this.convert(money, currency);
+      try {
+        const convertedMoney = bank.convert(money, currency);
 
-      if (!convertedAmount) {
-        const key = `${money.currency}->${currency}`;
-        failures.push(key);
+        if (!convertedMoney) {
+          const key = `${money.currency}->${currency}`;
+          failures.push(key);
+          return sum;
+        }
+
+        return sum + convertedMoney.amount;
+      } catch (error: unknown) {
+        if (error instanceof Error) failures.push(error.message);
+
         return sum;
       }
-
-      return sum + convertedAmount;
     }, 0);
 
     if (failures.length > 0) {
@@ -42,7 +49,7 @@ export class Portfolio {
     const key = `${money.currency}->${currency}`;
     const rate = exchangeRates.get(key);
 
-    if (!rate) return undefined;
+    if (!rate) throw new Error(key);
 
     return money.amount * rate;
   }
