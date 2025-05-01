@@ -1,12 +1,21 @@
 import { Money } from "../src/money";
 
 describe("Money", () => {
-  it("times method 동작해야 한다.", () => {
-    const tenEuros = new Money(10, "EUR");
+  describe("multiplication", () => {
+    it("should work.", () => {
+      const tenEuros = new Money(10, "EUR");
+      const twentyEuros = new Money(20, "EUR");
 
-    const twentyEuros = tenEuros.times(2);
+      expect(tenEuros.times(2).equals(twentyEuros)).toBe(true);
+    });
+  });
 
-    expect(twentyEuros.amount).toBe(20);
-    expect(twentyEuros.currency).toBe("EUR");
+  describe("division", () => {
+    it("should work.", () => {
+      const krw4002 = new Money(4002, "KRW");
+      const krw4002_dividied_4 = new Money(4002 / 4, "KRW");
+
+      expect(krw4002.divide(4).equals(krw4002_dividied_4)).toBe(true);
+    });
   });
 });
