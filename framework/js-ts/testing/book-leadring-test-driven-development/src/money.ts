@@ -1,4 +1,4 @@
-export type ICurrency = "USD" | "EUR" | "KRW";
+export type ICurrency = "USD" | "EUR" | "KRW" | string;
 
 export class Money {
   amount: number;

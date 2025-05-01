@@ -56,6 +56,19 @@ describe("Money", () => {
 
         expect(portfolio.evaluate("KRW")).toStrictEqual(krw2200);
       });
+
+      it("환율 정의되어 있지 않은 화폐로 평가 시에는 예외가 발생한다.", () => {
+        const oneDollar = new Money(1, "USD");
+        const oneEuro = new Money(1, "EUR");
+        const oneWon = new Money(1, "KRW");
+
+        const portfolio = new Portfolio();
+        portfolio.add(oneDollar, oneEuro, oneWon);
+
+        expect(() => portfolio.evaluate("Kalganid")).toThrow(
+          "Missing exchange rate"
+        );
+      });
     });
   });
 });
