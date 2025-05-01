@@ -32,4 +32,19 @@ describe("Money", () => {
       expect(portfolio.evaluate("USD")).toStrictEqual(fifteenDollars);
     });
   });
+
+  describe("multiple currencies", () => {
+    describe("addition", () => {
+      it("should work.", () => {
+        const fiveDollars = new Money(5, "USD");
+        const tenEuros = new Money(10, "EUR");
+        const seventeenDollars = new Money(17, "USD");
+
+        const portfolio = new Portfolio();
+        portfolio.add(fiveDollars, tenEuros);
+
+        expect(portfolio.evaluate("USD")).toStrictEqual(seventeenDollars);
+      });
+    });
+  });
 });
