@@ -16,9 +16,22 @@ export class Portfolio {
   }
 
   evaluate(currency: ICurrency) {
+    const failures: string[] = [];
     const total = this.moneys.reduce((sum, money) => {
-      return sum + this.convert(money, currency);
+      const convertedAmount = this.convert(money, currency);
+
+      if (!convertedAmount) {
+        const key = `${money.currency}->${currency}`;
+        failures.push(key);
+        return sum;
+      }
+
+      return sum + convertedAmount;
     }, 0);
+
+    if (failures.length > 0) {
+      throw new Error(`Missing exchange rate(s): ${failures.join("|")}`);
+    }
 
     return new Money(total, currency);
   }
@@ -29,7 +42,7 @@ export class Portfolio {
     const key = `${money.currency}->${currency}`;
     const rate = exchangeRates.get(key);
 
-    if (!rate) throw new Error(key);
+    if (!rate) return undefined;
 
     return money.amount * rate;
   }
