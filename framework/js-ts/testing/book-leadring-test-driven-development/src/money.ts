@@ -1,8 +1,10 @@
+export type ICurrency = "USD" | "EUR" | "KRW";
+
 export class Money {
   amount: number;
-  currency: "USD" | "EUR" | "KRW";
+  currency: ICurrency;
 
-  constructor(amount: number, currency: "USD" | "EUR" | "KRW") {
+  constructor(amount: number, currency: ICurrency) {
     this.amount = amount;
     this.currency = currency;
   }

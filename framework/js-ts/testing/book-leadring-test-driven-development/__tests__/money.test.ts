@@ -1,4 +1,5 @@
 import { Money } from "../src/money";
+import { Portfolio } from "../src/portfolio";
 
 describe("Money", () => {
   describe("multiplication", () => {
@@ -16,6 +17,19 @@ describe("Money", () => {
       const krw4002_dividied_4 = new Money(4002 / 4, "KRW");
 
       expect(krw4002.divide(4).equals(krw4002_dividied_4)).toBe(true);
+    });
+  });
+
+  describe("portpolio", () => {
+    it("same currency addition should work.", () => {
+      const fiveDollars = new Money(5, "USD");
+      const tenDollars = new Money(10, "USD");
+      const fifteenDollars = new Money(15, "USD");
+
+      const portfolio = new Portfolio();
+      portfolio.add(fiveDollars, tenDollars);
+
+      expect(portfolio.evaluate("USD")).toStrictEqual(fifteenDollars);
     });
   });
 });
