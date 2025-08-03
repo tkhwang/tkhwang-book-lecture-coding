@@ -14,7 +14,7 @@ class Goal(BaseModel):
 class PassiveGoalCreator:
     def __init__(
         self,
-        llm: ChatOpenAI,
+        llm: ChatOpenAI,                     
     ):
         self.llm = llm
 
