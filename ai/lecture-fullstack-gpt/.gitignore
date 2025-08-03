@@ -6,6 +6,7 @@ files/
 .DS_Store
 falcon.bin
 __pycache__
+.serena/
 
 CLAUDE.md
 CLAUDE.local.md
