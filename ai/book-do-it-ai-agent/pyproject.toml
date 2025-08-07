@@ -12,6 +12,7 @@ dependencies = [
     "langchain-chroma>=0.2.5",
     "langchain-community>=0.3.27",
     "langchain-openai>=0.3.28",
+    "langgraph>=0.6.3",
     "openai>=1.99.1",
     "pymupdf>=1.26.3",
     "pypdf>=5.9.0",
