@@ -1,0 +1,5 @@
+답변
+아니요. token은 보통 Promise가 아니라 스트리밍으로 전달되는 청크 값(예: LangChain의 AIMessageChunk 혹은 문자열)입니다. 그래서 token.content에 바로 접근하면 됩니다.
+for await (... of ...)는 이터레이터의 각 항목을 비동기로 기다리며, 만약 값이 Promise라면 자동으로 resolve해서 token에 넣습니다.
+이 줄에서 Promise는 await chatbot.stream(...)(스트림 객체를 받기 위한 대기)와 각 반복에서 다음 항목을 기다리는 동작에 있습니다.
+요약: token 자체는 일반적으로 Promise가 아니며, 필요 시 for await가 자동으로 await 합니다.
