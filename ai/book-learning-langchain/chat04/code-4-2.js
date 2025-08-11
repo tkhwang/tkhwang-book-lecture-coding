@@ -1,5 +1,12 @@
 import 'dotenv/config';
-import { Annotation, END, messagesStateReducer, START, StateGraph } from '@langchain/langgraph';
+import {
+  Annotation,
+  END,
+  MemorySaver,
+  messagesStateReducer,
+  START,
+  StateGraph,
+} from '@langchain/langgraph';
 import { ChatOpenAI } from '@langchain/openai';
 import fs from 'fs';
 import { HumanMessage } from '@langchain/core/messages';
@@ -26,17 +33,25 @@ const workflow = new StateGraph(StateAnnotation)
   .addEdge(START, 'chatbot')
   .addEdge('chatbot', END);
 
-const graph = workflow.compile();
+const graph = workflow.compile({
+  checkpointer: new MemorySaver(),
+});
 
-const image = await graph.getGraphAsync();
-const png = await image.drawMermaidPng();
+// const image = await graph.getGraphAsync();
+// const png = await image.drawMermaidPng();
 
-const arrayBuffer = await png.arrayBuffer();
-const buffer = Buffer.from(arrayBuffer);
+// const arrayBuffer = await png.arrayBuffer();
+// const buffer = Buffer.from(arrayBuffer);
 
-fs.writeFileSync('./chat04/graph.png', buffer);
+// fs.writeFileSync('./chat04/graph.png', buffer);
+
+const config = {
+  configurable: {
+    thread_id: 'conversation-1',
+  },
+};
 
 const input = { messages: [new HumanMessage('안녕하세요')] };
-for await (const chunk of await graph.stream(input)) {
+for await (const chunk of await graph.stream(input, config)) {
   console.log(chunk);
 }
