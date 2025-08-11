@@ -20,6 +20,8 @@
     "@langchain/openai": "^0.6.7",
     "cheerio": "^1.1.2",
     "dotenv": "^16.6.1",
+    "duck-duck-scrape": "^2.2.7",
+    "expr-eval": "^2.0.2",
     "langchain": "^0.3.30",
     "pdf-parse": "^1.1.1",
     "pg": "^8.11.3",
