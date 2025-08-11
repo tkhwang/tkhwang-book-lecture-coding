@@ -29,6 +29,9 @@ const graph = workflow.compile();
 
 const input = { messages: [new HumanMessage('안녕하세요!')] };
 
-for await (const chunk of await graph.stream(input)) {
-  console.log(chunk);
-}
+// for await (const chunk of await graph.stream(input)) {
+//   console.log(chunk);
+// }
+
+const result = await graph.invoke(input);
+console.log('🚀 ~ result:', result);
