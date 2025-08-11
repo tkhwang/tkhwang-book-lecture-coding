@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx",
+    "run": "tsx",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@langchain/community": "^0.3.50",
     "@langchain/core": "^0.3.68",
+    "@langchain/langgraph": "^0.4.3",
     "@langchain/openai": "^0.6.7",
     "cheerio": "^1.1.2",
     "dotenv": "^16.6.1",
@@ -18,5 +24,9 @@
     "pdf-parse": "^1.1.1",
     "pg": "^8.11.3",
     "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.0",
+    "tsx": "^4.19.2"
   }
 }
