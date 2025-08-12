@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Temporary files
+*.log
+tmp/
+temp/
+
+# Version control
+.git/
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+
+# Documentation
+*.md
+
+# Data files
+*.txt
+*.pdf
