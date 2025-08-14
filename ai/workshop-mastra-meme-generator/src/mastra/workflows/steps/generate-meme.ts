@@ -2,15 +2,6 @@ import { createStep } from '@mastra/core/workflows';
 import { z } from 'zod';
 import { memeTemplateSchema, captionsSchema } from '../schemas';
 
-type ImgflipResponse = {
-    success: boolean;
-    error_message?: string;
-    data: {
-        url: string;
-        page_url?: string;
-    };
-};
-
 export const generateMemeStep = createStep({
     id: 'generate-meme',
     description: "Create a meme using Imgflip's API",
@@ -54,7 +45,11 @@ export const generateMemeStep = createStep({
                 body: formData,
             });
 
-            const result = (await response.json()) as ImgflipResponse;
+            const result = (await response.json()) as {
+                success: boolean;
+                error_message?: string;
+                data: { url: string; page_url?: string };
+            };
 
             if (!result.success) {
                 throw new Error(`Imgflip API error: ${result.error_message}`);
