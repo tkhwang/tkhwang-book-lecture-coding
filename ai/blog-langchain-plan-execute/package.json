@@ -1,0 +1,23 @@
+{
+  "name": "blog-langchain-plan-execute",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "bun run ./src/index.ts",
+    "dev": "node --watch index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "@langchain/core": "^0.3.72",
+    "@langchain/langgraph": "^0.4.7",
+    "@langchain/openai": "^0.6.9",
+    "@langchain/tavily": "^0.1.5",
+    "langchain": "^0.3.31",
+    "zod": "^4.1.4"
+  }
+}
