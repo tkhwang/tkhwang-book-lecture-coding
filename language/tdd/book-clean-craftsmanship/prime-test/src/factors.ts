@@ -5,20 +5,10 @@ export function factors(n: number): number[] {
 
     const factors: number[] = [];
 
-    while (n % 2 === 0) {
-        factors.push(2);
-        n /= 2;
-    }
-
-    for (let i = 3; i * i <= n; i += 2) {
-        while (n % i === 0) {
-            factors.push(i);
-            n /= i;
+    for (let divisor = 2; n > 1; divisor += 1) {
+        for (; n % divisor === 0; n /= divisor) {
+            factors.push(divisor);
         }
-    }
-
-    if (n > 1) {
-        factors.push(n);
     }
 
     return factors;
