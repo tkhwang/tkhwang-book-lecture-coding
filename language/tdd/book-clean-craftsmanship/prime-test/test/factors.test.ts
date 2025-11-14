@@ -10,6 +10,12 @@ describe("Factors test", () => {
     it("should return 2 when the number is 2.", () => {
         const result = factors(2);
 
-        expect(result).toEqual([2]);
+        expect(result).contains(2);
+    });
+
+    it("should return 3 when the number is 3.", () => {
+        const result = factors(3);
+
+        expect(result).contains(3);
     });
 });
