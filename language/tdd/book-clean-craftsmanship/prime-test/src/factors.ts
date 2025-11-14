@@ -1,7 +1,9 @@
-
-
 export function factors(number: number): number[] {
-    if (number === 1) return [];
+    const factors = [];
 
-    return [2];
+    if (number === 2) {
+        factors.push(2);
+    }
+
+    return factors;
 }
