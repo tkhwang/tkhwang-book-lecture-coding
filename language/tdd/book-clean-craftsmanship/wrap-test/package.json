@@ -1,0 +1,20 @@
+{
+  "name": "wrap-test",
+  "version": "1.0.0",
+  "description": "Word wrap kata environment powered by TypeScript and Vitest",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:watch": "vitest --watch"
+  },
+  "keywords": ["tdd", "word-wrap", "vitest", "typescript"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}
