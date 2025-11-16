@@ -8,14 +8,13 @@ export class Customer {
     constructor(private readonly name: string) { }
 
     addRental(type: Rental, days: number) {
-        if (type === 'Regular') this.regularRentalCount += 1;
     }
 
     getRentalFee() {
-        return this.regularRentalCount * 1.5;
+        return 1.5;
     }
 
     getRentalPoints() {
-        return this.regularRentalCount;
+        return 1;
     }
 }
