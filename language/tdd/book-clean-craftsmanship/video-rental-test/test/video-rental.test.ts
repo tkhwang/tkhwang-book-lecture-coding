@@ -42,6 +42,15 @@ describe('Video Rental', () => {
 
             assertFeeAndPoint(customer, 1.5, 1);
         })
-    });
 
+        it('4일 이후에는 하루당 1.5달러 이고, 1포인트씩 적립된다.', () => {
+            const customer = new Customer('John Doe');
+            customer.addRental('Regular', 4);
+
+            const rentalFee = customer.getRentalFee();
+            const rentalPoints = customer.getRentalPoints();
+
+            assertFeeAndPoint(customer, 3.0, 2);
+        })
+    });
 });

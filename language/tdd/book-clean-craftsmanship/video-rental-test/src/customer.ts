@@ -3,18 +3,24 @@ type Rental =
     | 'Regular'
 
 export class Customer {
-    private regularRentalCount = 0;
+    private days = 0;
 
     constructor(private readonly name: string) { }
 
     addRental(type: Rental, days: number) {
+        this.days += days;
     }
 
     getRentalFee() {
-        return 1.5;
+        return this.applyGracePeriod(1.5, 3);
     }
 
     getRentalPoints() {
-        return 1;
+        return this.applyGracePeriod(1, 3);
+    }
+
+    private applyGracePeriod(amount: number, grace: number) {
+        if (this.days > grace) return amount + amount * (this.days - grace);
+        return amount;
     }
 }
