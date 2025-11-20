@@ -248,7 +248,7 @@ kubernetes==30.1.0
 langchain==0.2.13
 langchain-chroma==0.1.2
 langchain-community==0.2.12
-langchain-core==0.2.30
+langchain-core==0.3.80
 langchain-openai==0.1.21
 langchain-text-splitters==0.2.2
 langcodes==3.4.0
