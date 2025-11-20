@@ -231,7 +231,7 @@ keras==3.5.0
 keyring==23.5.0
 kiwisolver==1.4.7
 langchain==0.3.12
-langchain-core==0.3.25
+langchain-core==0.3.80
 langchain-text-splitters==0.3.3
 langcodes==3.5.0
 langsmith==0.2.3
