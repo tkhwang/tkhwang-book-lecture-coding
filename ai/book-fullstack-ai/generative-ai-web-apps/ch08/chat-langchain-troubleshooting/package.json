@@ -17,7 +17,7 @@
     "openai": "4.78.1",
     "@langchain/community": "0.3.24",
     "duck-duck-scrape": "2.2.7",
-    "@langchain/core": "^0.3.30",
+    "@langchain/core": "^0.3.80",
     "@langchain/openai": "^0.3.17",
     "@radix-ui/react-alert-dialog": "1.0.5",
     "@radix-ui/react-scroll-area": "^1.0.5",
