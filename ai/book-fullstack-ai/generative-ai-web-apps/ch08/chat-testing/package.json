@@ -18,7 +18,7 @@
     "@radix-ui/react-scroll-area": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "ai": "4.1.0",
-    "@langchain/core": "0.3.32",
+    "@langchain/core": "0.3.80",
     "@langchain/community": "0.3.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
