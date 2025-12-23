@@ -17,7 +17,7 @@
     "@langchain/langgraph": "^0.4.7",
     "@langchain/openai": "^0.6.9",
     "@langchain/tavily": "^0.1.5",
-    "langchain": "^0.3.31",
+    "langchain": "^0.3.37",
     "zod": "^4.1.4"
   }
 }
