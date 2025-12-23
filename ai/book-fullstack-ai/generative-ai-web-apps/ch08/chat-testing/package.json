@@ -23,7 +23,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
-    "langchain": "^0.3.6",
+    "langchain": "^0.3.37",
     "lucide-react": "^0.376.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
