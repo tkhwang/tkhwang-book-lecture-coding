@@ -8,7 +8,7 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
-    "ai": "^4.0.30",
+    "ai": "^5.0.52",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
