@@ -16,7 +16,7 @@
       "@langchain/google-genai": "^0.1.6",
       "@langchain/langgraph": "^0.2.36",
       "@langchain/anthropic": "0.3.11",
-      "langchain": "^0.3.8"
+      "langchain": "^0.3.37"
     },
     "devDependencies": {
       "concurrently": "^8.2.2",
