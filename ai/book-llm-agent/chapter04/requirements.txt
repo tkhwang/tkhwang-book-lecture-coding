@@ -541,7 +541,7 @@ webcolors==24.8.0
 webencodings==0.5.1
 websocket-client==1.8.0
 websockets==13.0.1
-Werkzeug==3.0.4
+Werkzeug==3.1.5
 widgetsnbextension==3.6.9
 wordcloud==1.9.3
 wrapt==1.16.0
