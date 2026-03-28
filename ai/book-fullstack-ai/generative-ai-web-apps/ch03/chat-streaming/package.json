@@ -12,7 +12,7 @@
   "dependencies": {
     "@ai-sdk/openai": "0.0.63",
     "@ai-sdk/google": "0.0.51",
-    "ai": "^3.4.7",
+    "ai": "^5.0.52",
     "openai": "4.67.0",
     "@radix-ui/react-alert-dialog": "1.0.5",
     "@radix-ui/react-scroll-area": "^1.0.5",
