@@ -380,7 +380,7 @@ py-cpuinfo==9.0.0
 py4j==0.10.9.7
 pyarrow==14.0.2
 pyarrow-hotfix==0.6
-pyasn1==0.6.1
+pyasn1==0.6.2
 pyasn1_modules==0.4.1
 pycocotools==2.0.8
 pycparser==2.22
